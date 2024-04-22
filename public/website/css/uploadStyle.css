@@ -1,0 +1,114 @@
+body {
+    background-color: #acd9d1;
+}
+
+/* navbar style */
+#but {
+    background-color: #acd9d1;
+    width: 110px;
+    border-radius: 7px;
+    text-align: center;
+}
+#but:hover {
+    color: white;
+}
+
+#but1 {
+    border: 3px solid black;
+    border-radius: 7px;
+    width: 110px;
+    text-align: center;
+}
+
+.nav-link {
+    transition: all 0.2s;
+}
+
+.nav-link:hover {
+    color: #acd9d1;
+}
+/* main section style */
+
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    color: #ffffff;
+}
+h2 {
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+p {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bolder;
+}
+.upload{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#drop-area{
+    width: 500px;
+    height: 300px;
+    padding: 30px;
+    background:#ffffff ;
+    text-align: center;
+    border-radius: 20px;
+
+}
+#img-view{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 2px dashed #acd9d1 ;
+    background-position: center;
+    background-size: cover;
+
+}
+
+#img-view img {
+    width: 30%;
+    margin-top: 25px;
+}
+
+#img-view p {
+    display: block;
+    font-size: 15px;
+    font-weight: bolder;
+    color: black;
+}
+
+/* #check-button {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #acd9d1;
+} */
+#check-button {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: bolder;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#check-button:hover {
+    background-color: black;
+    color :#ffffff
+}

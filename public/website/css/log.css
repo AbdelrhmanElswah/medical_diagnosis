@@ -1,0 +1,140 @@
+.vh-100 {
+    height: 100vh;
+    background-color: #acd9d1;
+}
+
+/* .py-5 {
+    padding-top:0rem !important;
+    padding-bottom: 0rem !important;
+} */
+
+.h-100 {
+    height: 100%;
+}
+
+.row {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.col {
+    flex: 1;
+}
+
+.col-xl-10 {
+    flex-basis: 90%;
+}
+
+.card {
+    border-radius: 2rem;
+}
+
+.img-fluid {
+    border-radius: 1rem 0 0 1rem;
+}
+
+.card-body {
+    padding: 3rem 2rem ;
+}
+
+.form-label {
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.btn-dark {
+    background-color: #acd9d1;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    
+}
+
+.btn-dark:hover {
+    background-color: white;
+    color: #acd9d1;
+}
+
+.text-muted {
+    color: #6c757d;
+}
+
+/* .text-muted:hover {
+    color: #5a6268;
+} */
+
+.h1 {
+    font-size: 2.5rem;
+}
+
+.small {
+    font-size: 0.875rem;
+}
+
+.text-black {
+    color: black;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.pb-3 {
+    padding-bottom: 1rem;
+}
+
+.pt-1 {
+    padding-top: 0.25rem;
+}
+
+.btn-lg {
+    padding: 0.8rem 2rem;
+    font-size: 1.25rem;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+
+@media (min-width:576px) {
+    .card-body{
+        padding: 1rem;
+    }
+}
+@media (max-width:767px) {
+    .card-body{
+        padding: 1rem;
+    }
+    .h1{
+        font-size: 2rem;
+    }
+}

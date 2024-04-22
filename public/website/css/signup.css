@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #acd9d1;
+}
+/* navbar style */
+.nav-link {
+  transition: all 0.2s;
+}
+.nav-link:hover {
+  color: #acd9d1;
+}
+
+.forms {
+  padding-top: 50px;
+}
+#bttn1 {
+  background-color: black;
+  color: white;
+  width: 200px;
+}
+#bttn1:hover {
+  background-color: white;
+  color: black;
+}
+
+#bttn2 {
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  width: 200px;
+  border-radius: 15px;
+}
+#bttn2:hover {
+  color: white;
+  background-color: black;
+}

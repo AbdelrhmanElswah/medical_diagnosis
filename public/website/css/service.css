@@ -1,0 +1,74 @@
+body {
+  background-color: #acd9d1;
+}
+
+/* navbar style */
+#but {
+  background-color: #acd9d1;
+  width: 110px;
+  border-radius: 7px;
+  text-align: center;
+}
+#but:hover {
+  color: white;
+}
+
+#but1 {
+  border: 3px solid black;
+  border-radius: 7px;
+  width: 110px;
+  text-align: center;
+}
+
+.nav-link {
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  color: #acd9d1;
+}
+
+/* main section style */
+#text0 {
+  padding-top: 160px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+.card {
+  background-image: url("img/back.jpg");
+  background-position: right;
+  border-radius: 20px;
+}
+.card-title {
+  font-weight: bold;
+}
+.card-img {
+  border-radius: 15px;
+  /* margin: 15px; */
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+.card-text {
+  font-size: large;
+}
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #acd9d1;
+  color: #000000;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+@media (min-width: 767px) {
+  .container-fluid {
+    justify-content: center;
+  }
+  .card {
+    width: 75%;
+  }
+}
