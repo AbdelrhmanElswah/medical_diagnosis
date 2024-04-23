@@ -78,7 +78,7 @@
                 brain tumors, facilitating timely treatment and improved patient
                 outcomes.
               </p>
-              <a href="{{route('uploadBrain')}}" class="btn">Try Now !</a>
+              <a href="{{route('upload-brain')}}" class="btn">Try Now !</a>
             </div>
           </div>
         </div>
@@ -101,7 +101,7 @@
                 and chest diseases. From identifying lung infections such as
                 pneumonia.
               </p>
-              <a href="{{route('uploadChest')}}" class="btn">Try Now !</a>
+              <a href="{{route('upload-chest')}}" class="btn">Try Now !</a>
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@
                 eye conditions, including glaucoma, cataract and diabetic
                 retinopathy
               </p>
-              <a href="{{route('uploadEye')}}" class="btn">Try Now !</a>
+              <a href="{{route('upload-eye')}}" class="btn">Try Now !</a>
             </div>
           </div>
         </div>

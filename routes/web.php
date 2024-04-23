@@ -44,9 +44,9 @@ Route::resource('result', ResultController::class);
 Route::resource('service', ServiceController::class);
 
 
-Route::get('/uploadBrain', [BrainController::class, 'showBrainForm'])->name('uploadBrain');
-Route::get('/uploadChest', [ChestController::class, 'showChestForm'])->name('uploadChest');
-Route::get('/uploadEye', [EyeController::class, 'showEyeForm'])->name('uploadEye');
+Route::get('/upload-brain', [BrainController::class, 'showBrainForm'])->name('upload-brain');
+Route::get('/upload-chest', [ChestController::class, 'showChestForm'])->name('upload-chest');
+Route::get('/upload-eye', [EyeController::class, 'showEyeForm'])->name('upload-eye');
 
 
 
