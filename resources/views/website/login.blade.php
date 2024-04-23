@@ -43,7 +43,7 @@
                                         <a class="small text-muted" href="">Forgot password?</a>
                                         <p class="mb-5 pb-lg-2">
                                             Don't have an account?
-                                            <a href="{{ route('register') }}" style="color: #5a6268">Register here</a>
+                                            <a href="{{ route('signup') }}" style="color: #5a6268">Register here</a>
                                         </p>
                                     </form>
                                 </div>

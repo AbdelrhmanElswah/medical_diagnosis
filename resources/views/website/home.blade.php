@@ -44,7 +44,7 @@
             <a class="nav-link active" href="service.html">Our Services</a>
           </li>
           <li class="nav-item me-5 pb-3">
-            <a class="nav-link" href="signup.html" id="but">Sign Up </a>
+            <a class="nav-link" href="{{ route('signup') }}" id="but">Sign Up </a>
           </li>
           <li class="nav-item me-5">
             <a class="nav-link" href="{{ route('login') }}" id="but1">Login </a>
