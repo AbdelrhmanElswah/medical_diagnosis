@@ -11,8 +11,8 @@
       href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
       rel="stylesheet"
     />
-    <title>Upload Page</title>
-    <link rel="stylesheet" href="uploadStyle.css" />
+    <title>@yield('title')</title>
+    <link rel="stylesheet" href="{{ asset('website/css/uploadStyle.css')}}" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <script src="upload.js"></script>
@@ -22,7 +22,7 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="#"
           ><img
-            src="img/Screenshot 2023-12-31 174454 1.png"
+            src="{{asset('website/img/Screenshot 2023-12-31 174454 1.png')}}"
             width="120px"
             alt="logo"
         /></a>
@@ -70,7 +70,7 @@
           <label for="input-file" id="drop-area">
             <input type="file" accept="image/*" id="input-file" hidden />
             <div id="img-view">
-              <img src="img/upload.jpg" />
+              <img src="{{asset('website/img/upload.jpg')}}" />
               <p>
                 Drag and drop or click here <br />
                 to upload image
@@ -83,6 +83,6 @@
         <button id="check-button" hidden>Check</button>
       </div>
     </main>
-    <script src="upload.js"></script>
+    <script src="{{asset('website/js/upload.js')}}"></script>
   </body>
 </html>

@@ -12,18 +12,14 @@
       rel="stylesheet"
     />
     <title>Service</title>
-    <link rel="stylesheet" href="serviceStyle (2).css" />
+    <link rel="stylesheet" href="{{ asset('website/css/service.css')}}" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <!-- ------------------------------------------------ -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"
-        ><img
-          src="img/Screenshot 2023-12-31 174454 1.png"
-          width="120px"
-          alt="logo"
-      /></a>
+        ><img src="{{ asset('website/img/Screenshot 2023-12-31 174454 1.png') }}" width="120px" alt="logo" /></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -68,7 +64,7 @@
       <div class="card">
         <div class="row no-gutters">
           <div class="col-md-3 col-xs-12">
-            <img src="img/brain 2.jpg" class="card-img" alt="Brain Image" />
+            <img src="{{asset('website/img/brain 2.jpg')}}" class="card-img" alt="Brain Image" />
           </div>
           <div class="col-md-8 col-xs-6">
             <div class="card-body">
@@ -82,7 +78,7 @@
                 brain tumors, facilitating timely treatment and improved patient
                 outcomes.
               </p>
-              <a href="upload.html" class="btn">Try Now !</a>
+              <a href="{{route('uploadBrain')}}" class="btn">Try Now !</a>
             </div>
           </div>
         </div>
@@ -94,7 +90,7 @@
       <div class="card">
         <div class="row no-gutters">
           <div class="col-md-3 col-xs-12">
-            <img src="img/chest.jpg" class="card-img" alt="Chest Image" />
+            <img src="{{asset('website/img/chest.jpg')}}" class="card-img" alt="Chest Image" />
           </div>
           <div class="col-md-8 col-xs-6">
             <div class="card-body">
@@ -105,7 +101,7 @@
                 and chest diseases. From identifying lung infections such as
                 pneumonia.
               </p>
-              <a href="upload.html" class="btn">Try Now !</a>
+              <a href="{{route('uploadChest')}}" class="btn">Try Now !</a>
             </div>
           </div>
         </div>
@@ -117,7 +113,7 @@
       <div class="card">
         <div class="row no-gutters">
           <div class="col-md-3 col-xs-12">
-            <img src="img/eye 2.jpg" class="card-img" alt="Eye Image" />
+            <img src="{{asset('website/img/eye 2.jpg')}}" class="card-img" alt="Eye Image" />
           </div>
           <div class="col-md-8 col-xs-6">
             <div class="card-body">
@@ -129,7 +125,7 @@
                 eye conditions, including glaucoma, cataract and diabetic
                 retinopathy
               </p>
-              <a href="upload.html" class="btn">Try Now !</a>
+              <a href="{{route('uploadEye')}}" class="btn">Try Now !</a>
             </div>
           </div>
         </div>

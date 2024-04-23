@@ -41,26 +41,27 @@
 
   <main>
     <h1 class="text-center pt-5 text-light">Create New Account</h1>
-    <div class="forms col-md-6 mx-auto">
+    <form method="POST" action="{{ route('signup') }}" class="forms col-md-6 mx-auto">
+      @csrf <!-- CSRF Token -->
       <div class="pb-4">
-        <input type="email" class="form-control text-center" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Name">
+        <input type="text" name="name" class="form-control text-center" aria-describedby="nameHelp" placeholder="Your Name">
       </div>
       <div class="pb-4">
-        <input type="email" class="form-control text-center" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+        <input type="email" name="email" class="form-control text-center" aria-describedby="emailHelp" placeholder="Email">
       </div>
       <div class="pb-4">
-        <input type="password" class="form-control text-center" id="exampleInputPassword1" placeholder="Password">
+        <input type="password" name="password" class="form-control text-center" placeholder="Password">
       </div>
       <div class="pb-4">
-        <input type="password" class="form-control text-center" id="exampleInputPassword1" placeholder="Confirm your Password">
+        <input type="password" name="password_confirmation" class="form-control text-center" placeholder="Confirm your Password">
       </div>
-    </div>
-    <div class="container text-center">
-      <button type="button" class="btn" id="bttn1">Create Account</button>
-    </div>
+      <div class="container text-center">
+        <button type="submit" class="btn" id="bttn1">Create Account</button>
+      </div>
+    </form>
     <h5 class="text-center pt-5">Already have an account?</h5>
     <div class="container text-center">
-      <button type="button" class="btn" id="bttn2">Login</button>
+      <button type="button" class="btn" id="bttn2" onclick="window.location.href='{{ route('login') }}'">Login</button>
     </div>
   </main>
 </body>
