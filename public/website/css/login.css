@@ -1,0 +1,25 @@
+
+.btn-lg {
+    padding: 0.8rem 2rem;
+    font-size: 1.25rem;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+
+@media (min-width:576px) {
+    .card-body{
+        padding: 1rem;
+    }
+}
+@media (max-width:767px) {
+    .card-body{
+        padding: 1rem;
+    }
+    .h1{
+        font-size: 2rem;
+    }
+}

@@ -7,6 +7,9 @@
 body {
   background-color: #acd9d1;
 }
+.main{
+  margin-top:130px;
+}
 /* navbar style */
 #but {
   background-color: #acd9d1;
@@ -29,7 +32,7 @@ body {
 
 /* main section style */
 #text0 {
-  padding-top: 160px;
+  padding-top: 20px;
   font-size: xx-large;
 }
 .img-fluid {

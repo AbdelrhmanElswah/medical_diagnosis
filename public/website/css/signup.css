@@ -1,40 +1,26 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background-color: #acd9d1;
-}
-/* navbar style */
-.nav-link {
-  transition: all 0.2s;
-}
-.nav-link:hover {
-  color: #acd9d1;
-}
 
-.forms {
-  padding-top: 50px;
-}
-#bttn1 {
-  background-color: black;
-  color: white;
-  width: 200px;
-}
-#bttn1:hover {
-  background-color: white;
-  color: black;
-}
-
-#bttn2 {
-  background-color: white;
-  color: black;
-  border: 3px solid black;
-  width: 200px;
-  border-radius: 15px;
-}
-#bttn2:hover {
-  color: white;
-  background-color: black;
-}
+    .forms {
+      background-color: #fff; /* White form background */
+      padding: 2rem; /* Spacing inside the form */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      margin-top: 3rem; /* Space from the top */
+    }
+    .form-control {
+      border: 1px solid #ced4da; /* Consistent border style */
+      margin-bottom: 1rem; /* Space between fields */
+    }
+    #bttn1 {
+      background-color: #008cba; /* Primary action color */
+      color: #fff;
+      padding: 0.5rem 1.5rem;
+      border-radius: 4px;
+      border: none;
+    }
+    #bttn2 {
+      background-color: transparent; /* Secondary action */
+      color: #008cba;
+      padding: 0.5rem 1.5rem;
+      border-radius: 4px;
+      border: 1px solid #008cba;
+    }

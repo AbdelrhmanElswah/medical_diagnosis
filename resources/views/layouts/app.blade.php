@@ -1,21 +1,27 @@
-@include('layouts.header')
+<!DOCTYPE html>
+<html lang="en">
 
-@include('layouts.nav')
 
-<main>
+    @include('layouts.header')
 
-    @yield('content')
-    
-</main>
+    <body>
+        @include('layouts.nav')
 
-<div class="container my-5 text-center" id="zz">
+        <div class="container-fluid main">
 
-@include('layouts.footer')
+            @yield('content')
+            
+        </div>
 
-</div>
+        <div class="container my-5 text-center" id="zz">
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        @include('layouts.footer')
 
-</body>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        @stack('scripts')
+
+    </body>
 
 </html>

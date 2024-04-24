@@ -1,63 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
-      rel="stylesheet"
-    />
-    <title>Service</title>
-    <link rel="stylesheet" href="{{ asset('website/css/service.css')}}" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </head>
-  <!-- ------------------------------------------------ -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"
-        ><img src="{{ asset('website/img/Screenshot 2023-12-31 174454 1.png') }}" width="120px" alt="logo" /></a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- ms---padding left -->
-        <ul class="navbar-nav fs-5 ms-auto">
-          <li class="nav-item me-5">
-            <a class="nav-link" href="home page.html">Home</a>
-          </li>
-          <li class="nav-item me-5">
-            <a class="nav-link" href="#">About Us</a>
-          </li>
-          <li class="nav-item me-5">
-            <a class="nav-link" href="#">Contact Us</a>
-          </li>
-          <li class="nav-item me-5">
-            <a class="nav-link active" href="service (2).html">Our Services</a>
-          </li>
-          <li class="nav-item me-5 pb-3">
-            <a class="nav-link" href="signup.html" id="but">Sign Up </a>
-          </li>
-          <li class="nav-item me-5">
-            <a class="nav-link" href="log.html" id="but1">Login </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+@extends('layouts.app')
+@push('head')
+<link rel="stylesheet" href="{{ asset('website/css/login.css') }}" />
 
-  <main>
+@endPush('head')
+@section('content')
     <h1 class="text-center text-light" id="text0">Our Services</h1>
     <!-- Brain -->
     <div class="container-fluid d-flex">
@@ -132,6 +78,4 @@
       </div>
     </div>
     <br />
-  </main>
-  <body></body>
-</html>
+@endSection
