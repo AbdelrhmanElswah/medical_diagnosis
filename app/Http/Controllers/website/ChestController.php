@@ -9,6 +9,6 @@ class ChestController extends Controller
 {
     public function showChestForm()
     {
-        return view('website.uploadChest');
+        return view('website.upload.uploadChest');
     }
 }

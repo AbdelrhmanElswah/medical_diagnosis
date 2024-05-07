@@ -9,6 +9,6 @@ class EyeController extends Controller
 {
     public function showEyeForm()
     {
-        return view('website.uploadEye');
+        return view('website.upload.uploadEye');
     }
 }

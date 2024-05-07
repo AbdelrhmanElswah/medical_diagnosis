@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Website;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class BrainController extends Controller
+class UserController extends Controller
 {
-    public function showBrainForm()
+    public function showUser()
     {
-        return view('website.upload.uploadBrain');
+        return view('website.user');
     }
 }

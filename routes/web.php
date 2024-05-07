@@ -5,12 +5,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OAuthController;
 use App\Http\Controllers\Website\HomeController;
 use App\Http\Controllers\Website\ResultController;
+use App\Http\Controllers\Website\UserController;
 use App\Http\Controllers\Website\ServiceController;
 use App\Http\Controllers\Website\BrainController;
 use App\Http\Controllers\Website\ChestController;
 use App\Http\Controllers\Website\EyeController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\LogoutController;
 
 
 
@@ -27,12 +29,13 @@ use App\Http\Controllers\Auth\RegisterController;
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 
 Route::get('/signup', [RegisterController::class, 'showRegistrationForm'])->name('signup');
 Route::post('/signup', [RegisterController::class, 'register']);
 
+Route::get('/user', [UserController::class, 'showUser'])->name('user');
 
 
 Route::resource('/', HomeController::class);
