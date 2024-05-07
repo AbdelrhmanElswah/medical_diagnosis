@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
+
 
 class RegisterController extends Controller
 {
@@ -32,6 +34,8 @@ class RegisterController extends Controller
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),
         ]);
+        
+        Session::flash('password_length_error', 'Password must be at least 8 characters long.');
 
         // Redirect the user after successful registration
         return redirect()->route('login')->with('success', 'Registration successful. Welcome, ' . $user->name . '!');

@@ -6,6 +6,22 @@
 @section('content')
       <div class="row justify-content-center">
         <div class="col-md-6">
+
+          @if (Session::has('signup_success'))
+            <div class="alert alert-success" role="alert">
+                {{ Session::get('signup_success') }}
+            </div>
+        @endif
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
           <form method="POST" action="{{ route('signup') }}" class="forms">
             @csrf <!-- CSRF Token -->
             <h1 class="text-center mb-4">Create New Account</h1>
