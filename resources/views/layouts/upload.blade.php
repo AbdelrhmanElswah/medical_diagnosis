@@ -13,9 +13,10 @@
     />
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('website/css/uploadStyle.css')}}" />
+    <link rel="stylesheet" href="{{ asset('website/css/user.css') }}" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
-  <script src="upload.js"></script>
+  <script src="{{asset('upload.js')}}"></script>
   <!-- ------------------------------------------------ -->
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
@@ -52,12 +53,37 @@
             <li class="nav-item me-5">
               <a class="nav-link" href="service (2).html">Our Services</a>
             </li>
-            <li class="nav-item me-5 pb-3">
-              <a class="nav-link" href="signup.html" id="but">Sign Up </a>
+            @if(auth()->check())
+            <li class="nav-item me-5">
+              <a class="nav-link" href="#" id="but1">Your Dashboard </a>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link" href="log.html" id="but1">Login </a>
+              <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" style="width: 50px;"
+              alt="Avatar" />
+              <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{ auth()->user()->name }}
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" type="button">My Account</a></li>
+                  <li><a class="dropdown-item" type="button">Edit Profile</a></li>
+                  <li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button class="dropdown-item" type="submit">Logout</button>
+                    </form>
+                </li>
+                </ul>
+              </div>
+              </li>
+              @else
+            <li class="nav-item me-5 pb-3">
+              <a class="nav-link" href="{{route('signup')}}" id="but">Sign Up </a>
             </li>
+            <li class="nav-item me-5">
+              <a class="nav-link" href="{{route('login')}}" id="but1">Login </a>
+            </li>
+            @endif
           </ul>
         </div>
       </div>
