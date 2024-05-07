@@ -38,7 +38,8 @@ Route::post('/signup', [RegisterController::class, 'register']);
 Route::get('/user', [UserController::class, 'showUser'])->name('user');
 
 
-Route::resource('/', HomeController::class);
+Route::get('/', [HomeController::class, 'showHome'])->name('home');
+
 
 
 Route::resource('result', ResultController::class);

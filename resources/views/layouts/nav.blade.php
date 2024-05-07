@@ -18,7 +18,7 @@
         <!-- ms---padding left -->
         <ul class="navbar-nav fs-5 ms-auto">
           <li class="nav-item me-5">
-            <a class="nav-link" href="home.html">Home</a>
+            <a class="nav-link" href={{route('home')}}>Home</a>
           </li>
           <li class="nav-item me-5">
             <a class="nav-link" href="#ccc">About Us</a>
