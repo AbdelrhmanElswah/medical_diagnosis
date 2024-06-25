@@ -13,16 +13,16 @@
                 <i class="fas fa-notes-medical"></i> Diagnosis
             </h5>
             <p class="card-text">Diagnose Result: <strong id="diagnosis-result">{{ $result['data']['class'] }}</strong></p>
-            <p class="card-text">Accuracy: <strong>{{ $result['data']['percentage'] }}</strong></p>
+            <p class="card-text">Class probability : <strong>{{ $result['data']['percentage'] }}%</strong></p>
             <div class="additional-info">
                 <p>
-                    This X-ray scan shows a healthy lung with no signs of abnormalities. The AI model has analyzed the scan and determined that there are no indications of lung disease or other issues.
+                    {!! $description['description'] !!}
                 </p>
                 <p>
                     If you have any concerns or symptoms, please consult with a healthcare professional for further evaluation and advice. Regular check-ups are important for maintaining good health.
                 </p>
             </div>
-            <div class="btn-group" role="group" aria-label="Action buttons">
+            <div class="btn-group my-3" role="group" aria-label="Action buttons">
                 <a href="{{ route('upload.' . $type) }}" class="btn btn-secondary">
                     <i class="fas fa-redo-alt"></i> Try Another Image
                 </a>

@@ -11,13 +11,17 @@ use App\Models\Year;
 use App\Models\Lecture;
 use App\Models\Period;
 use Carbon\Carbon;
+use Database\Seeders\ModelDescriptionSeeder;
 class DatabaseSeeder extends Seeder
 {
+    
     public function run(): void
     {
         $this->call([
             AppSeeder::class,
+            
         ]);
+        $this->call(ModelDescriptionSeeder::class);
 
     }
 }

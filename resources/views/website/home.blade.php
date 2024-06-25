@@ -21,12 +21,12 @@
         <h1 class="text-center" id="text2">Sign Up and Get</h1>
       </div>
 
-      <div class="container text-center pt-5">
+      <div class="container text-center pt-5 special-services-container ">
         <div class="row">
           <div class="col">
             <div class="card h-100">
               <h4 class="card-header">
-                <i class="fa-solid fa-stethoscope"></i> Customized experience
+                <i class="fa-solid fa-stethoscope"></i> <span >Customized experience</span>
               </h4>
 
               <div class="card-body">
@@ -40,7 +40,7 @@
           <div class="col">
             <div class="card h-100">
               <h4 class="card-header">
-                <i class="fa-solid fa-user-doctor"></i> Doctors recommendation
+                <i class="fa-solid fa-user-doctor"></i><span>Doctors recommendation</span> 
               </h4>
               <div class="card-body">
                 <p class="card-text">
@@ -53,7 +53,7 @@
           <div class="col">
             <div class="card h-100">
               <h4 class="card-header">
-                <i class="fa-solid fa-clock-rotate-left"></i> Medical history
+                <i class="fa-solid fa-clock-rotate-left"></i><span>Medical history</span> 
                 managment
               </h4>
               <div class="card-body">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <main>
+    <main class="users-main">
       <h1 class="text-center text-light" id="text0">
         Your Health , Our Priority
       </h1>

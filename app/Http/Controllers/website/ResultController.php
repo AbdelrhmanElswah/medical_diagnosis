@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\ModelDescription; // Include your model
 
 class ResultController extends Controller
 {
@@ -20,8 +21,11 @@ class ResultController extends Controller
         $result = session('resultData');
         $type = session('type');
         $uploadedImageUrl = session('uploadedImageUrl');
-
-        return view('website.result', compact('result', 'type', 'uploadedImageUrl'));
+        // Fetch the description from the database
+        $description = ModelDescription::where('type', $type)
+                                       ->where('class_name', $result['data']['class'])
+                                       ->first();
+        return view('website.result', compact('result', 'type', 'uploadedImageUrl','description'));
     }
 
 
