@@ -1,34 +1,3 @@
-body {
-    background-color: #acd9d1;
-}
-
-/* navbar style */
-#but {
-    background-color: #acd9d1;
-    width: 110px;
-    border-radius: 7px;
-    text-align: center;
-}
-#but:hover {
-    color: white;
-}
-
-#but1 {
-    border: 3px solid black;
-    border-radius: 7px;
-    width: 110px;
-    text-align: center;
-}
-
-.nav-link {
-    transition: all 0.2s;
-}
-
-.nav-link:hover {
-    color: #acd9d1;
-}
-/* main section style */
-
 .upload-container {
     display: flex;
     flex-direction: column;
@@ -36,79 +5,80 @@ body {
     align-items: center;
     margin-top: 150px;
     color: #ffffff;
-}
-h2 {
-    font-size: 25px;
-    color: #ffffff;
-    font-weight: bolder;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 30px;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
 }
 
-p {
-    font-size: 20px;
-    color: #ffffff;
-    font-weight: bolder;
+.upload-container h2 {
+    color: #007BFF;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
-.upload{
+
+.upload-container p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.upload-container #drop-area {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-#drop-area{
-    width: 500px;
     height: 300px;
     padding: 30px;
-    background:#ffffff ;
+    background: #ffffff;
     text-align: center;
     border-radius: 20px;
-
+    border: 2px dashed #acd9d1;
+    cursor: pointer;
+    transition: border-color 0.3s;
 }
-#img-view{
+
+.upload-container #drop-area:hover {
+    border-color: #0056b3;
+}
+
+.upload-container #img-view {
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    border: 2px dashed #acd9d1 ;
     background-position: center;
     background-size: cover;
-
 }
 
-#img-view img {
-    width: 30%;
+.upload-container #img-view img {
+    width: 100px;
     margin-top: 25px;
+    margin-bottom: 15px;
 }
 
-#img-view p {
+.upload-container #img-view p {
     display: block;
-    font-size: 15px;
-    font-weight: bolder;
-    color: black;
+    font-size: 18px;
+    font-weight: normal;
+    color: #333;
 }
 
-/* #check-button {
-    margin-top: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    color: #acd9d1;
-} */
-#check-button {
-    margin-top: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 24px;
-    font-weight: bolder;
-    padding: 10px 20px;
-    background-color: #ffffff;
-    color: black;
+.upload-container #check-button {
+    width: 80%; /* Make the button wider */
+    max-width: 300px; /* Maximum width */
+    padding: 15px 20px; /* Larger padding for better touch interaction */
+    background-color: #007BFF;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    margin: 20px auto; /* Center the button */
+    transition: background-color 0.3s;
 }
 
-#check-button:hover {
-    background-color: black;
-    color :#ffffff
+.upload-container #check-button:hover {
+    background-color: #0056b3;
 }
+

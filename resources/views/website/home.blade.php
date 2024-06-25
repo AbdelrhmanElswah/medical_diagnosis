@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@push('head')
+<link rel="stylesheet" href="{{ asset('website/css/style.css') }}" />
+@endPush('head')
 @section('content')
       <h1 class="text-center text-light" id="text0">
         Your Health , Our Priority

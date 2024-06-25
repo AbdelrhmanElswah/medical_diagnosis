@@ -5,41 +5,39 @@ namespace App\Http\Controllers\Website;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-
+use App\Services\FileUploadService; // Ensure the service is included
 
 class ChestController extends Controller
 {
-    public function showChestForm()
+    protected $fileUploadService;
+
+    public function __construct(FileUploadService $fileUploadService)
     {
-        return view('website.upload.uploadChest');
+        $this->fileUploadService = $fileUploadService;
     }
+
 
     public function predictChest(Request $request)
-{
+    {
+        $request->validate([
+            'file' => 'required|file|mimes:jpeg,png,jpg'
+        ]);
     
-    $request->validate([
-        'file' => 'required|file|mimes:jpeg,png,jpg'
-    ]);
-    $file = $request->file('file');
-
-    $customDirectory = 'website/upload'; 
-
-    $path = $file->store($customDirectory, 'public');
+        $uploadedImageUrl = $this->fileUploadService->uploadAndStore($request, 'chest');
+        $flaskApiUrl = env('FLASK_API_URL') . 'predict/covid19';
+        $file = $request->file('file');
+        $response = Http::attach(
+            'file', file_get_contents($file), $file->getClientOriginalName()
+        )->post($flaskApiUrl);
     
-    $uploadedImageUrl = asset('storage/' . $path);
-
-    $response = Http::attach(
-        'file', file_get_contents($file), $file->getClientOriginalName()
-    )->post('http://127.0.0.1:5000/predict/covid19');
-
-   
-    if ($response->successful()) {
-        $result = $response->json();
-        return view('website.result', compact('result', 'uploadedImageUrl'));
-    } else {
-        return back()->with('error', 'Error calling Flask API');
+        if ($response->successful()) {
+            $result = $response->json();
+            // Store result in session or cache
+            session(['resultData' => $result, 'type' => 'chest', 'uploadedImageUrl' => $uploadedImageUrl]);
+            return redirect()->action([ResultController::class, 'index']);
+        } else {
+            return back()->with('error', 'Error calling Flask API');
+        }
     }
-}
-
     
 }

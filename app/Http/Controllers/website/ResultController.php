@@ -10,10 +10,20 @@ class ResultController extends Controller
     /**
      * Display a listing of the resource.
      */
+// In ResultController
     public function index()
     {
-        return view('website.result');
+        if (!session()->has('resultData')) {
+            return redirect('/'); // Redirect to a default page if no data is available
+        }
+
+        $result = session('resultData');
+        $type = session('type');
+        $uploadedImageUrl = session('uploadedImageUrl');
+
+        return view('website.result', compact('result', 'type', 'uploadedImageUrl'));
     }
+
 
     /**
      * Show the form for creating a new resource.

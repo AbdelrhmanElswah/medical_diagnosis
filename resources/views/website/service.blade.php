@@ -1,12 +1,13 @@
 @extends('layouts.app')
 @push('head')
-<link rel="stylesheet" href="{{ asset('website/css/login.css') }}" />
+<link rel="stylesheet" href="{{ asset('website/css/service.css') }}" />
 
 @endPush('head')
 @section('content')
+    <div class="service-container ">
     <h1 class="text-center text-light" id="text0">Our Services</h1>
     <!-- Brain -->
-    <div class="container-fluid d-flex">
+    <div class="container-fluid d-flex service-container">
       <div class="card">
         <div class="row no-gutters">
           <div class="col-md-3 col-xs-12">
@@ -24,7 +25,7 @@
                 brain tumors, facilitating timely treatment and improved patient
                 outcomes.
               </p>
-              <a href="{{route('diagnosis.brain')}}" class="btn">Try Now !</a>
+              <a href="{{route('upload.brain')}}" class="btn">Try Now !</a>
             </div>
           </div>
         </div>
@@ -47,7 +48,7 @@
                 and chest diseases. From identifying lung infections such as
                 pneumonia.
               </p>
-              <a href="{{route('diagnosis.chest')}}" class="btn">Try Now !</a>
+              <a href="{{route('upload.chest')}}" class="btn">Try Now !</a>
             </div>
           </div>
         </div>
@@ -71,11 +72,12 @@
                 eye conditions, including glaucoma, cataract and diabetic
                 retinopathy
               </p>
-              <a href="{{route('diagnosis.eye')}}" class="btn">Try Now !</a>
+              <a href="{{route('upload.eye')}}" class="btn">Try Now !</a>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
     <br />
 @endSection

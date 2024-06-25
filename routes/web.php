@@ -10,6 +10,8 @@ use App\Http\Controllers\Website\ServiceController;
 use App\Http\Controllers\Website\BrainController;
 use App\Http\Controllers\Website\ChestController;
 use App\Http\Controllers\Website\EyeController;
+use App\Http\Controllers\Website\UploadController;
+
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LogoutController;
@@ -47,17 +49,18 @@ Route::resource('result', ResultController::class);
 
 Route::resource('service', ServiceController::class);
 
-
-Route::get('/diagnosis/brain', [BrainController::class, 'showBrainForm'])->name('diagnosis.brain');
-Route::post('/diagnosis/brain', [BrainController::class, 'predictBrain'])->name('brain');
-
-
-Route::get('/diagnosis/chest', [ChestController::class, 'showChestForm'])->name('diagnosis.chest');
-Route::post('/diagnosis/chest', [ChestController::class, 'predictChest'])->name('chest');
+Route::get('/upload/brain', [UploadController::class, 'showForm'])->name('upload.brain')->defaults('type', 'brain');
+Route::get('/upload/chest', [UploadController::class, 'showForm'])->name('upload.chest')->defaults('type', 'chest');
+Route::get('/upload/eye', [UploadController::class, 'showForm'])->name('upload.eye')->defaults('type', 'eye');
 
 
+Route::post('/diagnosis/brain', [BrainController::class, 'predictBrain'])->name('predict.brain');
 
-Route::get('/diagnosis/eye', [EyeController::class, 'showEyeForm'])->name('diagnosis.eye');
+
+Route::post('/diagnosis/chest', [ChestController::class, 'predictChest'])->name('predict.chest');
+
+
+
 Route::post('/diagnosis/eye', [EyeController::class, 'predictEye']);
 
 
