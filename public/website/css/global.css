@@ -29,6 +29,9 @@ body {
     border-radius: 20px;
     text-align: center;
 }
+#but:hover {
+    color: white;
+}
 
 #but1 {
     background-color: #ffffff; /* White background for contrast */
