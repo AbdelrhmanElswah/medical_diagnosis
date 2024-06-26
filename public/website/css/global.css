@@ -48,14 +48,11 @@ body {
     color: #ffffff; /* Text color on hover */
 }
 
-    /* footer style */
-    #footerr {
-      background-color: #e7e5e5;
-      padding-left: 80px;
-      max-width: 100%;
-    }
-  
-    #ff:hover {
-      padding-left: 8px;
-      color: #acd9d1;
-    }
+/* footer style */
+#ff:hover {
+    padding-left: 8px;
+    color: #acd9d1;
+}
+.footer-background {
+    background-color: white;
+}

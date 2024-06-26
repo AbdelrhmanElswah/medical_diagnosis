@@ -7,7 +7,7 @@
     color: #ffffff;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 30px;
     max-width: 500px;
     margin: auto;
@@ -15,7 +15,7 @@
 }
 
 .upload-container h2 {
-    color: #007BFF;
+    color: #acd9d1;
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -67,7 +67,7 @@
     width: 80%; /* Make the button wider */
     max-width: 300px; /* Maximum width */
     padding: 15px 20px; /* Larger padding for better touch interaction */
-    background-color: #007BFF;
+    background-color: #acd9d1;
     color: white;
     font-size: 18px;
     font-weight: bold;
@@ -79,6 +79,5 @@
 }
 
 .upload-container #check-button:hover {
-    background-color: #0056b3;
+    background-color: black;
 }
-

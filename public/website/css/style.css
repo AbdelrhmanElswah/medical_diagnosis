@@ -1,68 +1,66 @@
-
 #text0 {
-  padding-top: 20px;
-  font-size: xx-large;
+    padding-top: 20px;
+    font-size: xx-large;
 }
 
 .img-fluid {
-  width: 600px;
+    width: 700px;
 }
 
 #text1 {
-  text-align: start;
-  font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  margin-left: 20px;
-  margin-right: 20px;
+    text-align: start;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #news {
-  padding-top: 90px;
+    padding-top: 90px;
 }
 
 #text2 {
-  color: #ffffff;
-  text-align: center;
-  height: 55px;
-  
+    color: #ffffff;
+    text-align: center;
+    height: 55px;
 }
 
 .container3 {
-  padding-top: 120px;
+    padding-top: 120px;
 }
 
 .card {
-  --bs-card-border-color: #acd9d1;
-  --bs-card-border-width: 4px;
+    --bs-card-border-color: #acd9d1;
+    --bs-card-border-width: 4px;
 }
 
 #news-card {
-  width: 400px;
+    width: 400px;
 }
 
 #size {
-  border-width: 90px;
-  border-radius: 100px;
+    border-width: 90px;
+    border-radius: 100px;
 }
 
 #ccc {
-  color: #acd9d1;
+    color: #acd9d1;
 }
 
 #font {
-  font-size: large;
+    font-size: large;
 }
 
 #newsbttn {
-  text-align: center;
-  color: black;
+    text-align: center;
+    color: black;
 }
 
 #zz {
-  padding-left: 80px;
+    padding-left: 80px;
 }
 
 #ff:hover {
-  padding-left: 8px;
+    padding-left: 8px;
 }
