@@ -1,5 +1,4 @@
-/* Global Styles */
-* {
+Global Styles * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -49,10 +48,10 @@ body {
 }
 
 /* footer style */
-#ff:hover {
-    padding-left: 8px;
-    color: #acd9d1;
+/* footer */
+.footer {
+    padding-top: 100px;
 }
-.footer-background {
-    background-color: white;
+.footer-bttn a {
+    text-decoration: none;
 }
