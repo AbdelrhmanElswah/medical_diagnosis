@@ -25,7 +25,7 @@ class UploadController extends Controller
             ],
             'eye' => [
                 'title' => 'Eye Disease Diagnosis',
-                'action' => route('upload.eye'),
+                'action' => route('predict.eye'),
                 'requirements' => 'Use high-resolution images for better accuracy.',
                 'warning' => 'Please ensure the entire eye is visible in the scan.'
             ]
