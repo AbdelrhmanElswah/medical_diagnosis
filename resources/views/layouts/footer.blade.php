@@ -1,86 +1,64 @@
-
-    <footer class="text-center text-lg-start text-light">
-      <section
-        class="d-flex justify-content-between p-4 text-white"
-      ></section>
-      <section class="">
-        <div class="container text-center text-md-start mt-5 text-light">
-          <div class="row mt-3">
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <h6 class="text-uppercase fw-bold">Support</h6>
-              <hr
-                class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: white; height: 4px"
-              />
-              <p id="ff">
-                <a href="#!" class="text-light" style="text-decoration: none"
-                  >FAQS</a
-                >
-              </p id="ff">
-              <p id="ff">
-                <a href="#!" class="text-light" style="text-decoration: none"
-                  >Privcy Policy</a
-                >
-              </p>
-              <p id="ff">
-                <a href="#!" class="text-light" style="text-decoration: none"
-                  >Terms & Conditions</a
-                >
-              </p>
-            </div>
-            <div class="col-md-3 col-lg-2 col-xl-3 mx-auto mb-4">
-              <h6 class="text-uppercase fw-bold">Services</h6>
-              <hr
-                class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: white; height: 4px"
-              />
-              <p id="ff">
-                <a href="upload.html" class="text-light" style="text-decoration: none"
-                  >Brain Tumor Detection
-                </a>
-              </p>
-              <p id="ff">
-                <a href="upload.html" class="text-light" style="text-decoration: none"
-                  >Chest Disease Identification</a
-                >
-              </p>
-              <p id="ff">
-                <a href="upload.html" class="text-light" style="text-decoration: none"
-                  >Eye Disease Diagnosis:
-                </a>
-              </p>
-            </div>
-
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-              <h6 class="text-uppercase fw-bold">Contact</h6>
-              <hr
-                class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: white; height: 4px"
-              />
-              <p ><i class="fas fa-home mr-3"></i> Portsaid,Egypt</p>
-              <p><i class="fas fa-envelope mr-3"></i> Doctorna@gmail.com</p>
-              <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-            </div>
-            <div class="col-md-3 col-lg-2 col-xl-3 mx-auto mb-4">
-              <h6 class="text-uppercase fw-bold">Follow Us</h6>
-              <hr
-                class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: white; height: 4px"
-              />
-              <p >
-                <a href="#" 
-                  ><i class="fab fa-facebook-f text-light pe-3"></i
-                ></a>
-                <a href="#"
-                  ><i class="fab fa-instagram text-light pe-3"></i
-                ></a>
-                <a href="#"
-                  ><i class="fab fa-linkedin-in text-light pe-3"></i
-                ></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </footer>
- 
+<footer class="page-footer shadow" style="background-color: white">
+  <div class="d-flex flex-column mx-auto pt-5" id="om" style="width: 80%">
+    <div class="d-flex flex-wrap justify-content-between">
+      <div>
+        <a href="/" class="d-flex align-items-center p-0 text-dark" style="text-decoration: none">
+          <img alt="logo" src="{{ asset('website/img/2536.jpg') }}" width="50px" />
+          <span class="ms-3 h5 font-weight-bold">Doctorna</span>
+        </a>
+        <p class="my-3" style="width: 250px">
+          Doctorna harnesses the power of advanced AI models to provide
+          accurate and timely medical diagnoses. Trust Doctorna to bring
+          the future of healthcare to your family and friends.
+        </p>
+        <span class="mt-4">
+          <button class="btn btn-dark btn-flat p-2" style="margin-bottom: 30px">
+            <i class="fa-brands fa-facebook"></i>
+          </button>
+          <button class="btn btn-dark btn-flat p-2" style="margin-bottom: 30px">
+            <i class="fa-brands fa-linkedin"></i>
+          </button>
+          <button class="btn btn-dark btn-flat p-2" style="margin-bottom: 30px">
+            <i class="fa-brands fa-instagram"></i>
+          </button>
+        </span>
+      </div>
+      <div>
+        <p class="h5 mb-4 w-75 text-center" style="font-weight: 600; background-color: #acd9d1; border-radius: 8px;">
+          Services
+        </p>
+        <ul class="p-0 footer-bttn" style="list-style: none; cursor: pointer">
+          <li class="my-2 pt-3">
+            <a class="text-dark" href="/">Brain Tumor Detection</a>
+          </li>
+          <li class="my-2 pt-3">
+            <a class="text-dark" href="/">Chest Disease Identification</a>
+          </li>
+          <li class="my-2 pt-3">
+            <a class="text-dark" href="/">Eye Disease Diagnosis</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="h5 mb-4 w-auto text-center" style="font-weight: 600; background-color: #acd9d1; border-radius: 8px;">
+          Contact Us
+        </p>
+        <ul class="p-0" style="list-style: none; cursor: pointer">
+          <li class="my-2 pt-3">
+            <p class="text-dark">
+              <i class="fa-solid fa-house"></i> Portsaid, Egypt
+            </p>
+          </li>
+          <li class="my-2 pt-3">
+            <a class="text-dark" href="mailto:Doctorna@gmail.com"><i class="fa-solid fa-envelope"></i> Doctorna@gmail.com</a>
+          </li>
+          <li class="my-2 pt-3">
+            <p class="text-dark">
+              <i class="fa-solid fa-phone"></i> +0123456788
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

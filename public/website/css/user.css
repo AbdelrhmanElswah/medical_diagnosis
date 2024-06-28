@@ -44,17 +44,7 @@
     text-align: center;
     color: black;
   }
-  /* footer style */
-  #footerr {
-    background-color: #e7e5e5;
-    padding-left: 80px;
-    max-width: 100%;
-  }
-  #ff:hover {
-    padding-left: 8px;
-    color: #acd9d1;
-  }
-  
+
   /* review style */
   #reviews {
     background-color: white;

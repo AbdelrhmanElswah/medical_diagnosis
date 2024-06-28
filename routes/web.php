@@ -61,7 +61,7 @@ Route::post('/diagnosis/chest', [ChestController::class, 'predictChest'])->name(
 
 
 
-Route::post('/diagnosis/eye', [EyeController::class, 'predictEye']);
+Route::post('/diagnosis/eye', [EyeController::class, 'predictEye'])->name('predict.eye');
 
 
 

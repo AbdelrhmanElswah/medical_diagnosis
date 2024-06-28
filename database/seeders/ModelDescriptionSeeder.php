@@ -48,7 +48,28 @@ class ModelDescriptionSeeder extends Seeder
                 'class_name' => 'Viral Pneumonia',
                 'description' => '<p>The scan indicates signs of viral pneumonia, characterized by the inflammation and consolidation in the lungs.</p><p>Immediate medical treatment is crucial to manage symptoms and prevent complications.</p><p>Follow-up care and monitoring are advised to assess recovery and prevent recurrence.</p>',
                 'type' => 'chest'
-            ]
+            ],
+                        // Eye model descriptions
+                        [
+                            'class_name' => 'normal',
+                            'description' => '<p>This eye scan appears normal with no significant signs of eye diseases.</p><p>Continue to maintain regular eye check-ups to monitor your eye health and prevent any future complications.</p>',
+                            'type' => 'eye'
+                        ],
+                        [
+                            'class_name' => 'cataract',
+                            'description' => '<p>This scan indicates the presence of cataract, a condition where the lens of the eye becomes cloudy, affecting vision.</p><p>Early detection and treatment are important to prevent significant vision impairment. Consult an ophthalmologist for further evaluation and possible surgical options.</p>',
+                            'type' => 'eye'
+                        ],
+                        [
+                            'class_name' => 'diabetic_retinopathy',
+                            'description' => '<p>The scan suggests signs of diabetic retinopathy, a diabetes complication that affects the eyes.</p><p>It\'s crucial to manage your diabetes effectively and seek regular eye examinations to monitor and treat this condition. Consult an ophthalmologist for further evaluation and management.</p>',
+                            'type' => 'eye'
+                        ],
+                        [
+                            'class_name' => 'glaucoma',
+                            'description' => '<p>This scan indicates the presence of glaucoma, a group of eye conditions that damage the optic nerve, often caused by abnormally high pressure in the eye.</p><p>Early detection and treatment are vital to prevent vision loss. Consult an ophthalmologist for further evaluation and management options.</p>',
+                            'type' => 'eye'
+                        ]
         ]);
     }
 }
