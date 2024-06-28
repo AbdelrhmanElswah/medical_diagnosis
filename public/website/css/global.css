@@ -1,5 +1,4 @@
-/* Global Styles */
-* {
+Global Styles * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,6 +28,9 @@ body {
     border-radius: 20px;
     text-align: center;
 }
+#but:hover {
+    color: white;
+}
 
 #but1 {
     background-color: #ffffff; /* White background for contrast */
@@ -43,4 +45,13 @@ body {
 #but1:hover {
     background-color: #acd9d1; /* Background color on hover */
     color: #ffffff; /* Text color on hover */
+}
+
+/* footer style */
+/* footer */
+.footer {
+    padding-top: 100px;
+}
+.footer-bttn a {
+    text-decoration: none;
 }
