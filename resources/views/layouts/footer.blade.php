@@ -1,5 +1,5 @@
 <footer class="page-footer shadow" style="background-color: white">
-  <div class="d-flex flex-column mx-auto py-5" id="om" style="width: 80%">
+  <div class="d-flex flex-column mx-auto pt-5" id="om" style="width: 80%">
     <div class="d-flex flex-wrap justify-content-between">
       <div>
         <a href="/" class="d-flex align-items-center p-0 text-dark" style="text-decoration: none">
