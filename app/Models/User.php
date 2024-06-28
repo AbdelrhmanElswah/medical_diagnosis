@@ -18,11 +18,8 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'name','email','password', 'first_name', 'last_name', 'blood_type', 'location', 'email', 'phone', 'birthday', 'profile_picture',
     ];
-
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -40,5 +37,11 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'birthday' => 'date',
     ];
+
+    public function userHistories()
+    {
+        return $this->hasMany(UserHistory::class);
+    }
 }

@@ -15,8 +15,8 @@ use App\Http\Controllers\Website\UploadController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LogoutController;
-
-
+use App\Http\Controllers\Website\DashboardController;
+use App\Http\Controllers\Website\Edit_ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,6 +62,20 @@ Route::post('/diagnosis/chest', [ChestController::class, 'predictChest'])->name(
 
 
 Route::post('/diagnosis/eye', [EyeController::class, 'predictEye']);
+
+
+
+Route::get('/edit-profile', [Edit_ProfileController::class, 'showEdit'])->name('edit.profile');
+Route::post('/edit-profile', [Edit_ProfileController::class, 'update'])->name('profile.update');
+
+
+
+Route::get('/security', [Edit_ProfileController::class, 'showSecurity'])->name('security');
+Route::post('/profile/change-password', [Edit_ProfileController::class, 'changePassword'])->name('profile.changePassword');
+Route::post('/profile/delete-account', [Edit_ProfileController::class, 'deleteAccount'])->name('profile.deleteAccount');
+
+
+Route::get('/dashboard', [DashboardController::class, 'history'])->name('dashboard');
 
 
 

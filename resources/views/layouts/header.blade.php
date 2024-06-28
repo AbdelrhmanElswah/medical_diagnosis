@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('website/css/user.css') }}" />
 
 
+
     
     @stack('head')
 </head>

@@ -4,14 +4,16 @@ namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\ModelDescription; // Include your model
+use App\Models\ModelDescription;
+use App\Models\ModelImage;
+use App\Models\UserHistory;
+use Illuminate\Support\Facades\Auth;
 
 class ResultController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-// In ResultController
     public function index()
     {
         if (!session()->has('resultData')) {
@@ -21,59 +23,45 @@ class ResultController extends Controller
         $result = session('resultData');
         $type = session('type');
         $uploadedImageUrl = session('uploadedImageUrl');
+
         // Fetch the description from the database
         $description = ModelDescription::where('type', $type)
                                        ->where('class_name', $result['data']['class'])
                                        ->first();
-        return view('website.result', compact('result', 'type', 'uploadedImageUrl','description'));
-    }
 
+        // Save the user history
+        $this->saveUserHistory($result, $type, $description);
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
+        return view('website.result', compact('result', 'type', 'uploadedImageUrl', 'description'));
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Save user history.
      */
-    public function store(Request $request)
+    private function saveUserHistory($result, $type, $description)
     {
-        //
+        if (!Auth::check()) {
+            return; // User is not logged in
+        }
+
+        $userId = Auth::id();
+        $imagePath = session('uploadedImageUrl'); // Assuming this is the path to the uploaded image
+
+        // Create or find the ModelImage
+        $modelImage = ModelImage::firstOrCreate(
+            ['image_path' => $imagePath],
+            ['user_id' => $userId, 'model_type' => $type, 'name' => $result['data']['class']]
+        );
+
+        // Save the user history
+        UserHistory::create([
+            'user_id' => $userId,
+            'model_image_id' => $modelImage->id,
+            'model_description_id' => $description->id,
+            'category' => $type,
+            'date' => now(),
+            'result' => $result['data']['class'],
+        ]);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
 }

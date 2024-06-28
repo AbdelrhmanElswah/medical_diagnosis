@@ -1,0 +1,63 @@
+.body {
+    height: 100%;
+}
+
+.container-fluid {
+    height: 100%;
+}
+
+.row {
+    height: 100%;
+}
+
+.col-auto {
+    background-color: #acd9d1;
+    height: 100%;
+}
+
+.min-vh-100 {
+    height: 100vh;
+}
+
+
+
+
+/* DataTable Styles */
+.dataTables_wrapper {
+    margin-top: 20px;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    margin-left: 0.5em;
+    display: inline-block;
+    width: auto;
+}
+
+.dataTables_wrapper .dataTables_length select {
+    display: inline-block;
+    width: auto;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 0.5em 1em;
+    margin-left: 0.5em;
+}
+
+
+/* Responsive Table */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table-responsive .dataTables_wrapper .dataTables_length,
+.table-responsive .dataTables_wrapper .dataTables_filter,
+.table-responsive .dataTables_wrapper .dataTables_paginate,
+.table-responsive .dataTables_wrapper .dataTables_info {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.table-responsive .table {
+    margin-bottom: 0;
+}
+

@@ -14,4 +14,10 @@ class ModelImage extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function userHistories()
+    {
+        return $this->hasMany(UserHistory::class);
+    }
+
 }

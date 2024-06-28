@@ -33,4 +33,11 @@ class ModelDescription extends Model
      * @var array
      */
     protected $casts = [];
+
+
+
+    public function userHistories()
+    {
+        return $this->hasMany(UserHistory::class);
+    }
 }
