@@ -13,7 +13,7 @@
             
         </div>
 
-        <div class="container my-5 text-center" id="zz">
+        <div class="container-fluid px-0 mt-5 text-center" id="zz">
 
         @include('layouts.footer')
 
