@@ -23,6 +23,7 @@ class ResultController extends Controller
         $result = session('resultData');
         $type = session('type');
         $uploadedImageUrl = session('uploadedImageUrl');
+        $formattedClassName = $this->formatClassName($result['data']['class']);
 
         // Fetch the description from the database
         $description = ModelDescription::where('type', $type)
@@ -32,7 +33,7 @@ class ResultController extends Controller
         // Save the user history
         $this->saveUserHistory($result, $type, $description);
 
-        return view('website.result', compact('result', 'type', 'uploadedImageUrl', 'description'));
+        return view('website.result', compact('result', 'type', 'uploadedImageUrl', 'description','formattedClassName'));
     }
 
     /**
