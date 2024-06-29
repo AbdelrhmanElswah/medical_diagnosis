@@ -49,9 +49,22 @@ body {
 
 /* footer style */
 /* footer */
-.footer {
-    padding-top: 100px;
+#footerr {
+    background-color: white;
 }
 .footer-bttn a {
     text-decoration: none;
+}
+.service-item {
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateX(10px);
+    color: #007bff;
+}
+
+.service-item a {
+    text-decoration: none;
+    color: inherit;
 }
