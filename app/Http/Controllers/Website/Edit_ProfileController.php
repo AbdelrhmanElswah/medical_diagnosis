@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -45,14 +46,11 @@ class Edit_ProfileController extends Controller
     $user->email = $request->input('email');
     $user->phone = $request->input('phone');
 
-    // Convert the birthday to the correct format
     if ($request->has('birthday')) {
         $user->birthday = Carbon::createFromFormat('m/d/Y', $request->input('birthday'))->format('Y-m-d');
     }
 
-    // Handle profile picture upload
     if ($request->hasFile('profile_picture')) {
-        // Delete the old profile picture if it exists
         if ($user->profile_picture) {
             Storage::disk('public')->delete($user->profile_picture);
         }
@@ -68,6 +66,8 @@ class Edit_ProfileController extends Controller
             'profile_picture_url' => asset('storage/' . $user->profile_picture)
         ]);
     }
+
+    Session::flash('success', 'Your message has been sent successfully!');
 
     return redirect()->route('edit.profile')->with('success', 'Profile updated successfully.');
 }

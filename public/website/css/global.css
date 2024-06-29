@@ -55,3 +55,7 @@ body {
 .footer-bttn a {
     text-decoration: none;
 }
+
+html {
+    scroll-behavior: smooth;
+  }

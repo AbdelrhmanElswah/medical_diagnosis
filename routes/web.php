@@ -17,6 +17,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Website\DashboardController;
 use App\Http\Controllers\Website\Edit_ProfileController;
+use App\Http\Controllers\Website\ContactSubmissionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,7 +76,15 @@ Route::post('/profile/change-password', [Edit_ProfileController::class, 'changeP
 Route::post('/profile/delete-account', [Edit_ProfileController::class, 'deleteAccount'])->name('profile.deleteAccount');
 
 
-Route::get('/dashboard', [DashboardController::class, 'history'])->name('dashboard');
+Route::get('/history', [DashboardController::class, 'history'])->name('history');
+
+
+Route::get('/dashboard',[DashboardController::class, 'showDash'])->name('dashboard');
+
+Route::get('/contact-us',[DashboardController::class, 'showContact'])->name('contact-us');
+
+Route::post('/contact-us', [ContactSubmissionController::class, 'store'])->name('contact.store');
+
 
 
 

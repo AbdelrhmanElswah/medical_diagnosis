@@ -1,14 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
 .body {
     height: 100%;
 }
 
 .container-fluid {
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .row {
     height: 100%;
+    display: flex;
+    flex: 1;
+    flex-wrap: nowrap;
 }
+.sidebar {
+    background-color: #acd9d1;
+    height: 100%;
+}
+.content {
+    padding: 1rem;
+    flex: 1;
+    overflow-y: auto;
+}
+
 
 .col-auto {
     background-color: #acd9d1;
@@ -18,9 +39,6 @@
 .min-vh-100 {
     height: 100vh;
 }
-
-
-
 
 /* DataTable Styles */
 .dataTables_wrapper {
@@ -43,10 +61,10 @@
     margin-left: 0.5em;
 }
 
-
 /* Responsive Table */
 .table-responsive {
     overflow-x: auto;
+    width: 100%;
 }
 
 .table-responsive .dataTables_wrapper .dataTables_length,
@@ -59,5 +77,5 @@
 
 .table-responsive .table {
     margin-bottom: 0;
+    width: 100%;
 }
-

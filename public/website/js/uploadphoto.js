@@ -24,6 +24,8 @@ document.getElementById("fileInput").addEventListener("change", function (event)
     .then(response => response.json())
     .then(data => {
       if (data.success) {
+        alert("Profile picture updated successfully!");
+        // Optionally update UI with new profile picture URL
         document.getElementById("profilePicture").src = data.profile_picture_url;
       } else {
         alert("Error updating profile picture.");

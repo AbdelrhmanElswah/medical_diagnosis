@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.body {
+  height: 100%;
+}
+
+.container-fluid {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-wrap: nowrap;
+}
+.sidebar {
+  background-color: #acd9d1;
+  height: 100%;
+}
+.content {
+  padding: 1rem;
+  flex: 1;
+  overflow-y: auto;
+}

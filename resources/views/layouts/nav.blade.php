@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"
+      <a class="navbar-brand" href="/"
         ><img src="{{ asset('website/img/Screenshot 2023-12-31 174454 1.png') }}" width="120px" alt="logo" />
       </a>
       <button
@@ -21,10 +21,10 @@
             <a class="nav-link" href={{route('home')}}>Home</a>
           </li>
           <li class="nav-item me-5">
-            <a class="nav-link" href="#ccc">About Us</a>
-          </li>
+            <a class="nav-link" href="#about-us">About Us</a>
+          </li>          
           <li class="nav-item me-5">
-            <a class="nav-link" href="#ccc">Contact Us</a>
+            <a class="nav-link" href="{{route('contact-us')}}">Contact Us</a>
           </li>
           <li class="nav-item me-5">
             <a class="nav-link active" href="{{route('service.index')}}">Our Services</a>

@@ -57,6 +57,11 @@
             <!-- Update profile form -->
             <form method="POST" action="{{ route('profile.update') }}">
               @csrf
+                @if(Session::has('success'))
+                   <div class="alert alert-success">
+                   {{ Session::get('success') }}
+                  </div>
+                @endif
               <!-- Form Group (username)-->
               <div class="mb-3">
                 <label class="small mb-1" for="inputUsername">Username (how your name will appear to other users on the site)</label>

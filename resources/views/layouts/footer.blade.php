@@ -1,4 +1,4 @@
-<footer class="page-footer shadow" style="background-color: white">
+<footer class="page-footer shadow" style="background-color: white" id="about-us">
   <div class="d-flex flex-column mx-auto pt-5" id="om" style="width: 80%">
     <div class="d-flex flex-wrap justify-content-between">
       <div>
