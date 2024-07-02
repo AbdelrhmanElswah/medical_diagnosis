@@ -4,7 +4,7 @@
 
 @endPush('head')
 @section('content')
-    <div class="service-container ">
+    <div class="service-container py-5 ">
     <h1 class="text-center text-light" id="text0">Our Services</h1>
     <!-- Brain -->
     <div class="container-fluid d-flex service-container">

@@ -1,9 +1,10 @@
-<footer class="page-footer shadow" style="background-color: white" id="about-us">
+
+<footer class="page-footer shadow" >
   <div class="d-flex flex-column mx-auto pt-5" id="om" style="width: 80%">
     <div class="d-flex flex-wrap justify-content-between">
-      <div>
+      <div class="footer-section-1">
         <a href="/" class="d-flex align-items-center p-0 text-dark" style="text-decoration: none">
-          <img alt="logo" src="{{ asset('website/img/2536.jpg') }}" width="50px" />
+          <img alt="logo" src="{{ asset('website/img/logo.png') }}" width="50px" />
           <span class="ms-3 h5 font-weight-bold">Doctorna</span>
         </a>
         <p class="my-3" style="width: 250px">
@@ -23,11 +24,9 @@
           </button>
         </span>
       </div>
-      <div>
-        <p class="h5 mb-4 w-75 text-center" style="font-weight: 600; background-color: #acd9d1; border-radius: 8px;">
-          Services
-        </p>
-        <ul class="p-0 footer-bttn" style="list-style: none; cursor: pointer">
+      <div class=" footer-section-2 col-6 col-sm-4 col-lg-3 mb-3 order-2 order-sm-1">
+          <h5 class="lh-lg fw-bold mb-4 text-dark w-50 footer-title">Services</h5>
+          <ul class="list-unstyled mb-md-4 mb-lg-0">
           <li class="my-2 pt-3">
             <a class="text-dark" href="/">Brain Tumor Detection</a>
           </li>
@@ -37,13 +36,12 @@
           <li class="my-2 pt-3">
             <a class="text-dark" href="/">Eye Disease Diagnosis</a>
           </li>
-        </ul>
+          </ul>
       </div>
-      <div>
-        <p class="h5 mb-4 w-auto text-center" style="font-weight: 600; background-color: #acd9d1; border-radius: 8px;">
-          Contact Us
-        </p>
-        <ul class="p-0" style="list-style: none; cursor: pointer">
+
+      <div class="footer-section-3 col-6 col-sm-4 col-lg-3 mb-3 order-3 order-sm-2">
+          <h5 class="lh-lg fw-bold text-dark mb-4 w-50  footer-title">Contact Us</h5>
+          <ul class="list-unstyled mb-md-4 mb-lg-0">
           <li class="my-2 pt-3">
             <p class="text-dark">
               <i class="fa-solid fa-house"></i> Portsaid, Egypt
@@ -57,7 +55,7 @@
               <i class="fa-solid fa-phone"></i> +0123456788
             </p>
           </li>
-        </ul>
+          </ul>
       </div>
     </div>
   </div>

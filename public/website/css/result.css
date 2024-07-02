@@ -1,72 +1,192 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Heebo", sans-serif;
+.main{
+  background-color:var(--background-color) !important ;
 }
-html {
-  scroll-behavior: smooth;
-}
+.results-page {
 
-body {
-  background-color: #acd9d1;
-  height: 100px;
-}
-/* navbar style  */
-.navvv {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(255, 255, 255);
-  z-index: 100;
-  padding: 20px;
-  flex-wrap: wrap;
-}
+  .btn-custom {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Some padding */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer/hand icon */
+    font-size: 16px; /* Set a font size */
+    text-align: left; /* Align text to the left */
+    display: inline-flex; /* Flex display to align icon and text */
+    align-items: center; /* Align items in the center */
+    border-radius: 5px; /* Slight rounding of corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
 
-.navbar a {
-  padding: 5px 15px;
-  text-decoration: none;
-  color: black;
-  margin: 30px;
-}
-.navbar:hover {
-  color: #acd9d1;
-}
-/* main container style */
-.container-main {
-  background-color: #e0fdfb;
-  width: 1477px;
-  height: 400px;
-  display: flex;
-  justify-content: space-around;
-}
-.card {
-  padding-top: 100px;
-}
-.text {
-  padding-top: 100px;
-}
-h1 {
-  padding-top: 15px;
-}
-.container2 {
-  display: flex;
-  justify-content: center;
-  padding-top: 90px;
-}
-.vezzeta {
-  background-color: white;
-  border-radius: 14px;
-  width: 700px;
-  height: 50px;
-  padding-left: 50px;
-  padding-top: 5px;
-}
-.textbttn {
-  text-decoration: none;
-  color: #0971ce;
-  font-size: x-large;
-  font-style: bold;
-  padding-left: 50px;
-  text-align: center;
+  .btn-custom:hover {
+    background-color: #45a049; /* Darker shade of green */
+  }
+
+  .button-icon {
+    height: 24px; /* Set the height of the icon */
+    width: 24px; /* Set the width of the icon */
+    margin-right: 10px; /* Space between the icon and text */
+  }
+
+  .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .card-header {
+    background-color: #f8f9fa; /* Light, neutral background to keep it professional */
+    color: #333; /* Dark text for contrast */
+    padding: 10px 20px;
+    font-size: 1.5rem; /* Larger font size for the header */
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0; /* Subtle separation from the body */
+  }
+
+  .card-header .fas {
+    margin-right: 10px; /* Space between icon and text */
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .result-icon-and-message {
+    display: flex;
+    align-items: center; /* Aligns icon and text vertically */
+    padding-left: 20px; /* Alignment adjustment */
+    background-color: #f8f9fa; /* Light background for the text area */
+    width: 100%; /* Ensures it fills container */
+    margin-bottom: 20px; /* Add space below for separation */
+  }
+  .result-icon-and-message.success {
+    background-color: #f4fff487;
+    .icon-success {
+      color: #28a745; /* Green icon for success */
+    }
+    .status-message{
+      color: #28a745;
+    }
+  }
+
+  .result-icon-and-message.alert {
+    background-color: #fff9f9;
+    .icon-alert,.status-message {
+      color: #dc3545; /* Red icon for alert */
+    }
+  }
+  .icon-success, .icon-alert {
+    font-size: 2rem;
+    margin-right: 10px; /* Space between icon and text */
+  }
+
+  .status-message {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  .scan-image {
+    display: flex; /* Use flexbox to control alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 20px;
+    padding-bottom: 20px; /* Adds padding below the image */
+  }
+
+  .scan-image img {
+    width: 70%; /* Adjust width as necessary */
+    max-width: 500px; /* Control maximum size */
+    height: auto; /* Keep aspect ratio intact */
+    border: 1px solid #ddd; /* Optional border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 8px; /* Rounded corners for a softer appearance */
+  }
+
+  .detailed-info {
+    text-align: left; /* Aligns all detailed info text to the left */
+    padding: 20px;
+    border-top: 2px solid #ddd; /* Adds a line separator above the detailed info */
+    background-color: #ffffff; /* Different background for clear separation */
+  }
+
+  .detailed-info .diagnosis-title {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .detailed-info .diagnosis-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(172, 217, 209);
+  }
+
+  .detailed-info .diagnosis-title i {
+    margin-right: 10px; /* Space between icon and text */
+  }
+
+
+  .detailed-info .description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px; /* Adds spacing between paragraphs */
+  }
+
+  .btn-group-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    margin-top: 20px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; /* Ensure all buttons have border-radius */
+    transition: background-color 0.3s;
+    display: inline-flex; /* Maintain inline-flex for alignment */
+    align-items: center;
+    text-align: left;
+    width: auto; /* Keep width auto in larger views */
+  }
+
+  /* Media query for smaller screens to stack buttons vertically */
+  @media (max-width: 768px) {
+    .btn-group-row {
+      flex-direction: column;
+      align-items: center; /* Center-align buttons for aesthetics */
+    }
+
+    .btn {
+      width: 100%; /* Full width for smaller screens */
+      margin-bottom: 10px; /* Space between stacked buttons */
+      border-radius: 5px !important; /* Reinforce border-radius for all buttons in mobile view */
+    }
+    .scan-image img {
+      width: 80%; /* Adjust width as necessary */
+      max-width: 500px; /* Control maximum size */
+      height: auto; /* Keep aspect ratio intact */
+      border: 1px solid #ddd; /* Optional border */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+      border-radius: 8px; /* Rounded corners for a softer appearance */
+    }
+  }
+
+  .btn:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Subtle shadow for depth */
+  }
 }

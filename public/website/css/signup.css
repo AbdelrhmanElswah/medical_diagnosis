@@ -1,4 +1,6 @@
-
+.main{
+  background-color:var(--background-color) !important ;
+}
     .forms {
       background-color: #fff; /* White form background */
       padding: 2rem; /* Spacing inside the form */

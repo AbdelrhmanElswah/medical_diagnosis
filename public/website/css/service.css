@@ -1,4 +1,6 @@
-
+.main{
+  background-color:var(--background-color) !important ;
+}
 
 /* main section style */
 #text0 {

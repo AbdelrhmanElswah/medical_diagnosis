@@ -4,6 +4,7 @@
 
 @endPush('head')
 @section('content')
+<div class=" container-fluid py-5">
       <div class="row justify-content-center">
         <div class="col-md-6">
 
@@ -36,4 +37,5 @@
           </form>
         </div>
       </div>
+</div>
 @endSection

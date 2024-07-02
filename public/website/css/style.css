@@ -2,7 +2,38 @@
     padding-top: 20px;
     font-size: xx-large;
 }
-
+.home-sec-1{
+    margin-top: 100px;
+}
+.home-sec-3,.home-sec-5{
+    background-color: var(--background-color);
+}
+.home-sec-4 .try-now{
+    border-color: var(--background-color);
+}
+.home-sec-4 .try-now:hover{
+    background-color: var(--background-color) !important; 
+    color: black !important;
+}
+.home-sec-5 .carousel-indicators {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0;
+    margin-left: 15%;
+    margin-bottom: 1rem;
+    margin-right: 15%;
+    list-style: none;
+  }
+  
 .img-fluid {
     width: 700px;
 }
@@ -31,7 +62,7 @@
 }
 
 .card {
-    --bs-card-border-color: #acd9d1;
+    --bs-card-border-color: var(--background-color);
     --bs-card-border-width: 4px;
 }
 
@@ -45,7 +76,7 @@
 }
 
 #ccc {
-    color: #acd9d1;
+    color: var(--background-color);
 }
 
 #font {
@@ -56,3 +87,79 @@
     text-align: center;
     color: black;
 }
+.home-sec-1 h1 {
+    color: white;
+    font-size: 3rem; /* Adjust the size as needed */
+    font-weight: bold; /* Optional: Make the text bold */
+}
+
+.home-sec-2{
+    background-color: white;
+}
+/* Add this to your style.css file */
+
+/* Scope all styles under .home-sec-2 */
+/* Scope all styles under .focus-section */
+/* Scope all styles under .home-sec-2 */
+.home-sec-2 .icon-box {
+    position: relative;
+    display: inline-block;
+    color: grey; /* Initial color */
+    transition: transform 0.3s ease, color 0.3s ease; /* Add transitions for transform and color */
+}
+
+.home-sec-2 .focus-icon {
+    display: block;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease, color 0.3s ease; /* Add transitions for transform and color */
+    color: grey; /* Initial color */
+}
+
+.home-sec-2 .focus-icon-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease, color 0.3s ease; /* Add transitions for transform and color */
+    color: grey; /* Initial color */
+}
+
+.home-sec-2 .icon-box:hover .focus-icon {
+    opacity: 0;
+    color: black; /* Change color to black on hover */
+}
+
+
+.home-sec-2 .icon-box:hover .focus-icon-hover {
+    opacity: 1;
+    color: black; /* Change color to black on hover */
+}
+.home-sec-2 .icon-box:hover  {
+    color: black; /* Change color to black on hover */
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.icon-box {
+    transition: color 0.3s ease, transform 0.3s ease; /* Add transitions for color and transform */
+}
+
+/* Ensure smooth transition back to original state */
+.home-sec-2 .icon-box, .home-sec-2 .focus-icon, .home-sec-2 .icon-text {
+    transform: scale(1); /* Default scale */
+    color: black; /* Default color */
+}
+
+
+
+
+/* Position the link at the bottom of the card body */
+.home-sec-6 .card .card-body .stretched-link {
+    text-decoration: none; /* Remove underline */
+}
+.home-sec-6 .stretched-link:hover{
+    text-decoration: underline !important;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+    text-decoration-color: var(--background-color) !important;
+}
+
+
+

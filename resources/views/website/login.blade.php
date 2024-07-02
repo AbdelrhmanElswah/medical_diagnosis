@@ -4,6 +4,7 @@
 
 @endPush('head')
 @section('content')
+<div class=" container-fluid py-5">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col col-xl-10">
                     <div class="card">
@@ -44,4 +45,5 @@
                     </div>
                 </div>
             </div>
+</div>
 @endSection

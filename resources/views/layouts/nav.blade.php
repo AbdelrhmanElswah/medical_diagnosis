@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-1 d-block bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/"
-        ><img src="{{ asset('website/img/Screenshot 2023-12-31 174454 1.png') }}" width="120px" alt="logo" />
+      <a class="navbar-brand" href="#">
+        <img src="{{ asset('website/img/logo-2.png') }}" width="120px" alt="logo" />
       </a>
       <button
         class="navbar-toggler"

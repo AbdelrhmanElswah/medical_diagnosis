@@ -1,4 +1,6 @@
-
+.main{
+    background-color:var(--background-color) !important ;
+}
 .btn-lg {
     padding: 0.8rem 2rem;
     font-size: 1.25rem;

@@ -32,8 +32,9 @@ class ResultController extends Controller
 
         // Save the user history
         $this->saveUserHistory($result, $type, $description);
+        $doctorUrl = $this->generateDoctorUrl($type);
 
-        return view('website.result', compact('result', 'type', 'uploadedImageUrl', 'description','formattedClassName'));
+        return view('website.result', compact('result', 'type', 'uploadedImageUrl', 'description', 'formattedClassName', 'doctorUrl'));
     }
 
     /**
@@ -64,5 +65,26 @@ class ResultController extends Controller
             'result' => $result['data']['class'],
         ]);
     }
-
+    private function formatClassName($className)
+    {
+        // Replace all underscores with spaces
+        $className = str_replace('_', ' ', $className);
+        // Capitalize the first letter of each word
+        $className = ucwords(strtolower($className));
+    
+        return $className;
+    }
+    private function generateDoctorUrl($type)
+    {
+        switch ($type) {
+            case 'chest':
+                return 'https://www.vezeeta.com/en/doctor/chest/egypt';
+            case 'eye':
+                return 'https://www.vezeeta.com/en/doctor/ophthalmology/egypt';
+            case 'brain':
+                return 'https://www.vezeeta.com/en/doctor/neurology/portsaid';
+            default:
+                return 'https://www.vezeeta.com/en/doctor/portsaid';
+        }
+    }
 }

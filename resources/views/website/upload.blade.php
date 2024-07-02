@@ -6,7 +6,7 @@
 
 @section('content')
 <main>
-    <div class="upload-container">
+    <div class="upload-container py-5">
         <h2>{{ $title }}</h2>
         <p>Upload the picture you want to diagnose:</p>
         <form action="{{ $action }}" method="POST" enctype="multipart/form-data">
