@@ -17,8 +17,8 @@ class AppSeeder extends Seeder
         // Seed Users
         User::create([
             'name' => 'User',
-            'email' => 'admin1@admin.com',
-            'password' => Hash::make('123'),
+            'email' => 'admin3@admin.com',
+            'password' => Hash::make('12345678'),
         ]);
 
     }
