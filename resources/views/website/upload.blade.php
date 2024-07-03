@@ -5,7 +5,7 @@
 @endPush
 
 @section('content')
-<main>
+<main class="pt-5 pb-5">
     <div class="upload-container py-5">
         <h2>{{ $title }}</h2>
         <p>Upload the picture you want to diagnose:</p>
