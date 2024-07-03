@@ -20,6 +20,8 @@ class AddProfileFieldsToUsersTable extends Migration
             $table->string('location')->nullable();
             $table->string('phone')->nullable();
             $table->date('birthday')->nullable();
+            $table->integer('age')->nullable();
+
         });
     }
 

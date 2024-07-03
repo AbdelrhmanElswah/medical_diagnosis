@@ -34,14 +34,12 @@
             <a class="nav-link" href="{{ route('dashboard') }}" id="but1">Your Dashboard </a>
           </li>
           <li class="nav-item me-5">
-            <img src="{{ Auth::user()->profile_picture ? asset('storage/' . Auth::user()->profile_picture) : 'http://bootdey.com/img/Content/avatar/avatar1.png' }}" class="rounded-circle" style="width: 50px;" alt="Avatar" />
-
+            <img id="navProfilePicture" src="{{ Auth::user()->profile_picture ? asset('storage/' . Auth::user()->profile_picture) : 'http://bootdey.com/img/Content/avatar/avatar1.png' }}" class="rounded-circle cropped-profile-picture" alt="Avatar" />
             <div class="btn-group">
               <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 {{ auth()->user()->name }}
               </button>
               <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" type="button">My Account</a></li>
                 <li><a class="dropdown-item" href="{{ route('edit.profile') }}">Edit Profile</a></li>
                 <li>
                   <form id="logout-form" action="{{ route('logout') }}" method="POST">
@@ -64,3 +62,5 @@
       </div>
     </div>
   </nav>
+
+  <script src="{{ asset('website/js/uploadphoto.js') }}"></script>

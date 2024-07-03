@@ -23,54 +23,42 @@ class Edit_ProfileController extends Controller
         return view('website.security');
     }
 
-   public function update(Request $request)
-{
-    $request->validate([
-        'name' => 'nullable|string|max:255|unique:users,name,' . Auth::id(),
-        'first_name' => 'nullable|string|max:255',
-        'last_name' => 'nullable|string|max:255',
-        'blood_type' => 'nullable|string|max:3',
-        'location' => 'nullable|string|max:255',
-        'email' => 'required|email|max:255|unique:users,email,' . Auth::id(),
-        'phone' => 'nullable|string|max:20',
-        'birthday' => 'nullable|date_format:m/d/Y',
-        'profile_picture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5120',
-    ]);
-
-    $user = Auth::user();
-    $user->name = $request->input('name');
-    $user->first_name = $request->input('first_name');
-    $user->last_name = $request->input('last_name');
-    $user->blood_type = $request->input('blood_type');
-    $user->location = $request->input('location');
-    $user->email = $request->input('email');
-    $user->phone = $request->input('phone');
-
-    if ($request->has('birthday')) {
-        $user->birthday = Carbon::createFromFormat('m/d/Y', $request->input('birthday'))->format('Y-m-d');
-    }
-
-    if ($request->hasFile('profile_picture')) {
-        if ($user->profile_picture) {
-            Storage::disk('public')->delete($user->profile_picture);
-        }
-        $imagePath = $request->file('profile_picture')->store('website/profile_pictures', 'public');
-        $user->profile_picture = $imagePath;
-    }
-
-    $user->save();
-
-    if ($request->hasFile('profile_picture')) {
-        return response()->json([
-            'success' => true,
-            'profile_picture_url' => asset('storage/' . $user->profile_picture)
+    public function update(Request $request)
+    {
+        $request->validate([
+            'name' => 'nullable|string|max:255|unique:users,name,' . Auth::id(),
+            'first_name' => 'nullable|string|max:255',
+            'last_name' => 'nullable|string|max:255',
+            'blood_type' => 'nullable|string|max:3',
+            'location' => 'nullable|string|max:255',
+            'email' => 'required|email|max:255|unique:users,email,' . Auth::id(),
+            'phone' => 'nullable|string|max:20',
+            'birthday' => 'nullable|date_format:m/d/Y',
+            'age' => 'nullable|integer|min:0',
         ]);
+    
+        $user = Auth::user();
+        $user->name = $request->input('name');
+        $user->first_name = $request->input('first_name');
+        $user->last_name = $request->input('last_name');
+        $user->blood_type = $request->input('blood_type');
+        $user->location = $request->input('location');
+        $user->email = $request->input('email');
+        $user->phone = $request->input('phone');
+        $user->age = $request->input('age');
+    
+        if ($request->has('birthday')) {
+            $user->birthday = Carbon::createFromFormat('m/d/Y', $request->input('birthday'))->format('Y-m-d');
+        }
+    
+        $user->save();
+    
+        Session::flash('success', 'Your message has been sent successfully!');
+    
+        return redirect()->route('edit.profile')->with('success', 'Profile updated successfully.');
     }
-
-    Session::flash('success', 'Your message has been sent successfully!');
-
-    return redirect()->route('edit.profile')->with('success', 'Profile updated successfully.');
-}
+    
+    
 
 public function changePassword(Request $request)
     {
@@ -100,4 +88,33 @@ public function changePassword(Request $request)
 
         return redirect('/')->with('success', 'Account deleted successfully.');
     }
+
+
+    public function updateProfilePicture(Request $request)
+{
+    $request->validate([
+        'profile_picture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5120',
+    ]);
+
+    $user = Auth::user();
+
+    if ($request->hasFile('profile_picture')) {
+        if ($user->profile_picture) {
+            Storage::disk('public')->delete($user->profile_picture);
+        }
+        $imagePath = $request->file('profile_picture')->store('website/profile_pictures', 'public');
+        $user->profile_picture = $imagePath;
+        $user->save();
+
+        return response()->json([
+            'success' => true,
+            'profile_picture_url' => asset('storage/' . $user->profile_picture)
+        ]);
+    }
+
+    return response()->json([
+        'success' => false,
+        'message' => 'No profile picture uploaded.'
+    ], 400);
+}
 }

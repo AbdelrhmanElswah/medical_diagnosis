@@ -14,7 +14,7 @@ document.getElementById("fileInput").addEventListener("change", function (event)
     const formData = new FormData();
     formData.append('profile_picture', file);
 
-    fetch('/edit-profile', {
+    fetch('/update-profile-picture', {
       method: 'POST',
       headers: {
         'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
@@ -25,8 +25,9 @@ document.getElementById("fileInput").addEventListener("change", function (event)
     .then(data => {
       if (data.success) {
         alert("Profile picture updated successfully!");
-        // Optionally update UI with new profile picture URL
         document.getElementById("profilePicture").src = data.profile_picture_url;
+        document.getElementById("navProfilePicture").src = data.profile_picture_url;  // Update the navigation bar image
+        
       } else {
         alert("Error updating profile picture.");
       }

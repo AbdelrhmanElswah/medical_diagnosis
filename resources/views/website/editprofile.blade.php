@@ -38,8 +38,13 @@
             <img class="img-account-profile rounded-circle mb-2" src="{{ $user->profile_picture ? asset('storage/' . $user->profile_picture) : 'http://bootdey.com/img/Content/avatar/avatar1.png' }}" alt="Profile Picture" id="profilePicture" />
             <!-- Profile picture help block-->
             <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
+            @if(Session::has('success'))
+            <div class="alert alert-success">
+            {{ Session::get('success') }}
+           </div>
+         @endif
             <!-- Profile picture upload form -->
-            <form method="POST" action="{{ route('profile.update') }}" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('update.profile.picture') }}" enctype="multipart/form-data">
               @csrf
               <!-- Hidden input for profile picture -->
               <input type="file" id="fileInput" name="profile_picture" class="hidden-input" accept="image/*" />
@@ -87,8 +92,13 @@
                   <label class="small mb-1" for="inputBloodType">Blood Type</label>
                   <input class="form-control" id="inputBloodType" name="blood_type" type="text" value="{{ old('blood_type', $user->blood_type) }}" placeholder="Enter your blood type" />
                 </div>
-                <!-- Form Group (location)-->
+                <!-- Form Group (age)-->
                 <div class="col-md-6">
+                  <label class="small mb-1" for="inputAge">Age</label>
+                  <input class="form-control" id="inputAge" name="age" type="number" value="{{ old('age', $user->age) }}" placeholder="Enter your age" />
+              </div>
+                <!-- Form Group (location)-->
+                <div class="mb-3">
                   <label class="small mb-1" for="inputLocation">Location</label>
                   <input class="form-control" id="inputLocation" name="location" type="text" value="{{ old('location', $user->location) }}" placeholder="Enter your location" />
                 </div>

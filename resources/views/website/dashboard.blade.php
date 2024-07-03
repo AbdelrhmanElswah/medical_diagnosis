@@ -59,6 +59,15 @@
       .col-lg-3 {
         flex: 1;
       }
+
+      .cropped-profile-picture {
+    width: 50px; /* Desired fixed width */
+    height: 50px; /* Desired fixed height */
+    object-fit: cover; /* Crop the image to cover its container */
+    object-position: center; /* Center the image within its container */
+    border-radius: 50%; /* Ensure a circular shape if the image is square */
+}
+
     </style>
   </head>
   <body>
@@ -99,18 +108,6 @@
                   <span class="ms-1 d-none d-sm-inline">Medical History</span>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="{{route('service.index')}}" class="nav-link align-middle px-0 text-white pt-4">
-                  <i class="fa-solid fa-user-doctor"></i>
-                  <span class="ms-1 d-none d-sm-inline">Service</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="nav-link px-0 align-middle text-white pt-4">
-                  <i class="fa-solid fa-user-doctor"></i>
-                  <span class="ms-1 d-none d-sm-inline">Nearby Doctors</span></a
-                >
-              </li>
               <li>
                 <a href="{{route('contact-us')}}" class="nav-link px-0 align-middle text-white pt-4">
                   <i class="fa-solid fa-message"></i>
@@ -125,18 +122,12 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                <img
-                src="{{ asset('website/img/photo-handsome-unshaven-guy-looks-with-pleasant-expression-directly-camera.jpg') }}"
-                alt="hugenerd"
-                width="30"
-                height="30"
-                class="rounded-circle"
-              />
-                  <span class="d-none d-sm-inline mx-1">Username</span>
+                <img id="navProfilePicture" src="{{ Auth::user()->profile_picture ? asset('storage/' . Auth::user()->profile_picture) : 'http://bootdey.com/img/Content/avatar/avatar1.png' }}" class="rounded-circle cropped-profile-picture" alt="Avatar" />
+                <span class="d-none d-sm-inline mx-1">{{ $user->name }}</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="{{ route('edit.profile') }}">
                       <i class="fa-solid fa-user"></i> Profile
                     </a>
                   </li>
@@ -144,8 +135,12 @@
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
-                      <i class="fa-solid fa-right-from-bracket"></i> Sign out
+                    <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                      <i class="fa-solid fa-right-from-bracket"></i> Logout
+                  </a>
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      @csrf
+                  </form>
                     </a>
                   </li>
                 </ul>
@@ -170,55 +165,53 @@
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Age</h4>
-                    <h5 class="card-text">23</h5>
+                    <h5 class="card-text">{{ $user->age ?? 'N/A' }}</h5>
                   </div>
                 </div>
               </div>
               <div class="col-sm-3 col-md-3 col-lg-3 mb-2 mb-sm-0">
                 <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Blood Type</h4>
-                    <h5 class="card-text">{{ $user->blood_type }}</h5>
-                  </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Blood Type</h4>
+                        <h5 class="card-text">{{ $user->blood_type ?? 'N/A' }}</h5>
+                    </div>
                 </div>
-              </div>
+            </div>            
               <div class="col-sm-3 col-md-3 col-lg-3 mb-2 mb-sm-0">
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Location</h4>
-                    <h5 class="card-text">{{ $user->location }}</h5>
+                    <h5 class="card-text">{{ $user->location ?? 'N/A' }}</h5>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col py-3">
-              <script
-                type="text/javascript"
-                src="https://www.gstatic.com/charts/loader.js"
-              ></script>
+              <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
               <script type="text/javascript">
-                google.charts.load("current", { packages: ["corechart"] });
-                google.charts.setOnLoadCallback(drawChart);
-
-                function drawChart() {
-                  var data = google.visualization.arrayToDataTable([
-                    ["Task", "check"],
-                    ["Positive Checkup", 6],
-                    ["Negative Checkup", 4],
-                  ]);
-
-                  var options = {
-                    title: "Medical History",
-                  };
-
-                  var chart = new google.visualization.PieChart(
-                    document.getElementById("piechart")
-                  );
-
-                  chart.draw(data, options);
-                }
+                  google.charts.load('current', {'packages':['corechart']});
+                  google.charts.setOnLoadCallback(drawChart);
+              
+                  function drawChart() {
+                      // Ensure the container element exists
+                      var container = document.getElementById('chart_div');
+                      if (!container) {
+                          console.error('Container is not defined');
+                          return;
+                      }
+              
+                      var data = google.visualization.arrayToDataTable(@json($chartData));
+              
+                      var options = {
+                          title: 'Checkup History',
+                          pieHole: 0.4,
+                      };
+              
+                      var chart = new google.visualization.PieChart(container);
+                      chart.draw(data, options);
+                  }
               </script>
-              <div id="piechart" style="width: 40%; height: 300px"></div>
+              <div id="chart_div" style="width: 40%; height: 300px"></div>
             </div>
             <div class="col py-3">
               <section class="content">
@@ -250,14 +243,6 @@
                         @endforeach
                     </tbody>
                     </table>
-                  </div>
-                  <div class="text-center mt-4">
-                    <a
-                      href="another_page.html"
-                      class="btn"
-                      style="color: white; background-color: #acd9d1"
-                      >See More</a
-                    >
                   </div>
                 </div>
               </section>

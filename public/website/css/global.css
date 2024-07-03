@@ -115,3 +115,11 @@ body {
     border-top: 3px solid #acd9d1;
 
 }
+
+.cropped-profile-picture {
+    width: 50px; /* Desired fixed width */
+    height: 50px; /* Desired fixed height */
+    object-fit: cover; /* Crop the image to cover its container */
+    object-position: center; /* Center the image within its container */
+    border-radius: 50%; /* Ensure a circular shape if the image is square */
+}
