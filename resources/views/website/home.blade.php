@@ -88,7 +88,7 @@
             <div class="col">
               <div class="card h-100">
                 <h4 class="card-header">
-                  <i class="fa-solid fa-user-doctor"></i><span>Doctors recommendation</span> 
+                  <i class="fa-solid fa-user-doctor"></i> <span>Doctors recommendation</span> 
                 </h4>
                 <div class="card-body">
                   <p class="card-text">
@@ -101,8 +101,8 @@
             <div class="col">
               <div class="card h-100">
                 <h4 class="card-header">
-                  <i class="fa-solid fa-clock-rotate-left"></i><span>Medical history</span> 
-                  managment
+                  <i class="fa-solid fa-clock-rotate-left"></i><span>Medical history managment</span> 
+                 
                 </h4>
                 <div class="card-body">
                   <p class="card-text">
