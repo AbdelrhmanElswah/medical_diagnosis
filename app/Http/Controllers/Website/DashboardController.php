@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\UserHistory;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -16,7 +17,8 @@ class DashboardController extends Controller
         // Fetch only the latest 3 entries for the dashboard
         $historyData = $this->getUserHistoryData(3);
          
-        $historyChart=$this->getUserHistoryData();
+        $historyChart = $this->getUserHistoryData();
+    
         // Count the number of positive and negative checkups
         $positiveCheckups = 0;
         $negativeCheckups = 0;
@@ -35,8 +37,26 @@ class DashboardController extends Controller
             ['Negative Checkup', $negativeCheckups],
         ];
     
-        return view('dashboard.index', compact('historyData', 'user', 'chartData'));
+        // Most used model
+        $mostUsedModel = UserHistory::where('user_histories.user_id', $user->id)
+            ->join('model_images', 'user_histories.model_image_id', '=', 'model_images.id')
+            ->select('model_images.model_type', DB::raw('count(*) as total'))
+            ->groupBy('model_images.model_type')
+            ->orderBy('total', 'desc')
+            ->first()
+            ->model_type ?? 'N/A';
+    
+        // Latest model used
+        $latestModelUsed = UserHistory::where('user_histories.user_id', $user->id)
+            ->join('model_images', 'user_histories.model_image_id', '=', 'model_images.id')
+            ->select('model_images.model_type')
+            ->orderBy('user_histories.date', 'desc')
+            ->first()
+            ->model_type ?? 'N/A';
+    
+        return view('dashboard.index', compact('historyData', 'user', 'chartData', 'mostUsedModel', 'latestModelUsed'));
     }
+    
     
 
     public function showContact()

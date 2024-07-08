@@ -1,0 +1,26 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    background-color: #acd9d1 !important;
+}
+.sidebar a{
+  color: white !important;
+}
+
+.nav-link.active {
+  color: black !important;
+  background-color: transparent !important;
+}
+
+.cropped-profile-picture {
+width: 50px; /* Desired fixed width */
+height: 50px; /* Desired fixed height */
+object-fit: cover; /* Crop the image to cover its container */
+object-position: center; /* Center the image within its container */
+border-radius: 50%; /* Ensure a circular shape if the image is square */
+}

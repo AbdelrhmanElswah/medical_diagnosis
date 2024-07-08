@@ -1,31 +1,73 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-.body {
-  height: 100%;
+/* resources/css/contactus.css */
+
+body {
+  background-color: #f8f9fa;
 }
 
-.container-fluid {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+.section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
-.row {
-  height: 100%;
-  display: flex;
-  flex: 1;
-  flex-wrap: nowrap;
+.container {
+  max-width: 900px;
+  margin: auto;
 }
-.sidebar {
+
+.form-label {
+  font-weight: bold;
+}
+
+.input-group-text {
   background-color: #acd9d1;
-  height: 100%;
+  border: none;
 }
-.content {
-  padding: 1rem;
-  flex: 1;
-  overflow-y: auto;
+
+.btn {
+  background-color: #acd9d1;
+  border: none;
+  color: white;
+}
+
+.alert {
+  margin-top: 1rem;
+}
+
+.border-dark-subtle {
+  border-color: rgba(0,0,0,.125) !important;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.py-3 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.py-md-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-secondary {
+  color: rgba(108, 117, 125, 1) !important;
 }
