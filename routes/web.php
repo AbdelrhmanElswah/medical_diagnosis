@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\ForgotPasswordController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\OAuthController;
@@ -15,6 +16,7 @@ use App\Http\Controllers\Website\UploadController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Website\DashboardController;
 use App\Http\Controllers\Website\Edit_ProfileController;
 use App\Http\Controllers\Website\ContactSubmissionController;
@@ -32,6 +34,10 @@ use App\Http\Controllers\Website\ContactSubmissionController;
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
+Route::get('forgot-password', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
+Route::post('forgot-password', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+Route::get('reset-password/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+Route::post('reset-password', [ResetPasswordController::class, 'reset'])->name('password.update');
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 
@@ -69,6 +75,13 @@ Route::post('/diagnosis/eye', [EyeController::class, 'predictEye'])->name('predi
 Route::get('/edit-profile', [Edit_ProfileController::class, 'showEdit'])->name('edit.profile');
 Route::post('/edit-profile', [Edit_ProfileController::class, 'update'])->name('profile.update');
 
+Route::post('/update-profile-picture', [Edit_ProfileController::class, 'updateProfilePicture'])->name('update.profile.picture');
+
+
+
+
+
+
 
 
 Route::get('/security', [Edit_ProfileController::class, 'showSecurity'])->name('security');
@@ -81,9 +94,10 @@ Route::get('/history', [DashboardController::class, 'history'])->name('history')
 
 Route::get('/dashboard',[DashboardController::class, 'showDash'])->name('dashboard');
 
-Route::get('/contact-us',[DashboardController::class, 'showContact'])->name('contact-us');
-
-Route::post('/contact-us', [ContactSubmissionController::class, 'store'])->name('contact.store');
+Route::middleware('auth')->group(function () {
+    Route::get('/contact-us', [DashboardController::class, 'showContact'])->name('contact-us');
+    Route::post('/contact-us', [ContactSubmissionController::class, 'store'])->name('contact.store');
+})->middleware('guest');
 
 
 

@@ -67,12 +67,6 @@
                   <span class="ms-1 d-none d-sm-inline">Medical History</span>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="{{route('service.index')}}" class="nav-link align-middle px-0 text-white pt-4">
-                  <i class="fa-solid fa-user-doctor"></i>
-                  <span class="ms-1 d-none d-sm-inline">Service</span>
-                </a>
-              </li>
               <li>
                 <a href="{{route('contact-us')}}" class="nav-link px-0 align-middle text-dark pt-4">
                   <i class="fa-solid fa-message"></i>

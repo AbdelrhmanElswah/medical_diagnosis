@@ -15,6 +15,6 @@ class Authenticate extends Middleware
         if ($request->is('api/*')) {
             return null; // Return null for API routes to prevent redirection
         }
-        return route('admin.login'); // Redirect to admin login for web routes
+        return route('login'); // Redirect to admin login for web routes
     }
 }

@@ -8,7 +8,6 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
-
 class RegisterController extends Controller
 {
     public function showRegistrationForm()
@@ -23,6 +22,9 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|confirmed|min:8',
+            'age' => 'nullable|integer|min:0',
+            'location' => 'nullable|string|max:255',
+            'blood_type' => 'nullable|string|max:3',
         ];
 
         // Validate the request data
@@ -33,12 +35,15 @@ class RegisterController extends Controller
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),
+            'age' => $request->input('age'), // Optional
+            'location' => $request->input('location'), // Optional
+            'blood_type' => $request->input('blood_type'), // Optional
         ]);
-        
-        Session::flash('password_length_error', 'Password must be at least 8 characters long.');
+
+        Session::flash('success', 'Registration successful. Welcome, ' . $user->name . '!');
 
         // Redirect the user after successful registration
-        return redirect()->route('login')->with('success', 'Registration successful. Welcome, ' . $user->name . '!');
+        return redirect()->route('login');
     }
-
 }
+

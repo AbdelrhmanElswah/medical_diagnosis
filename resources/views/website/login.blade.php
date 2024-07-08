@@ -33,7 +33,7 @@
                                             <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
                                         </div>
 
-                                        <a class="small text-muted" href="">Forgot password?</a>
+                                        <a class="small text-muted" href="{{ route('password.request') }}">Forgot password?</a>
                                         <p class="mb-5 pb-lg-2">
                                             Don't have an account?
                                             <a href="{{ route('signup') }}" style="color: #5a6268">Register here</a>
