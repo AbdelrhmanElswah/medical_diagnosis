@@ -18,7 +18,7 @@
         <!-- ms---padding left -->
         <ul class="navbar-nav fs-5 ms-auto">
           <li class="nav-item me-5">
-            <a class="nav-link" href={{route('home')}}>Home</a>
+            <a class="nav-link active" href={{route('home')}}>Home</a>
           </li>
           <li class="nav-item me-5">
             <a class="nav-link" href="#about">About Us</a>
@@ -27,7 +27,7 @@
             <a class="nav-link" href="{{route('contact-us')}}">Contact Us</a>
           </li>
           <li class="nav-item me-5">
-            <a class="nav-link active" href="{{route('service.index')}}">Our Services</a>
+            <a class="nav-link " href="{{route('service.index')}}">Our Services</a>
           </li>
           @if(auth()->check())
           <li class="nav-item me-5">

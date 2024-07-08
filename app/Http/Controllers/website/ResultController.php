@@ -32,9 +32,64 @@ class ResultController extends Controller
 
         // Save the user history
         $this->saveUserHistory($result, $type, $description);
+
+        // Generate the doctor URL based on the type
         $doctorUrl = $this->generateDoctorUrl($type);
 
         return view('website.result', compact('result', 'type', 'uploadedImageUrl', 'description', 'formattedClassName', 'doctorUrl'));
+    }
+
+    /**
+     * Fetch cities with pagination.
+     */
+    public function getCities(Request $request)
+    {
+        $cities = [
+            'portsaid' => 'Portsaid',
+            'cairo' => 'Cairo',
+            'giza' => 'Giza',
+            'alexandria' => 'Alexandria',
+            'north-coast' => 'North Coast',
+            'qalyubia' => 'Qalyubia',
+            'gharbia' => 'Gharbia',
+            'menoufia' => 'Menoufia',
+            'fayoum' => 'Fayoum',
+            'el-dakahlia' => 'El-Dakahlia',
+            'el-sharqia' => 'El-Sharqia',
+            'el-beheira' => 'El-Beheira',
+            'damietta' => 'Damietta',
+            'matrouh' => 'Matrouh',
+            'assiut' => 'Assiut',
+            'el-ismailia' => 'El-Ismailia',
+            'hurghada' => 'Hurghada',
+            'sharm-el-sheikh' => 'Sharm El Sheikh',
+            'suez' => 'Suez',
+            'sohag' => 'Sohag',
+            'el-minia' => 'El-Minia',
+            'kafr-el-sheikh' => 'Kafr El Sheikh',
+            'luxor' => 'Luxor',
+            'qena' => 'Qena',
+            'aswan' => 'Aswan',
+            'beni-suef' => 'Beni Suef',
+        ];
+
+        $search = $request->input('search');
+        $citiesFiltered = array_filter($cities, function ($city) use ($search) {
+            return stripos($city, $search) !== false;
+        });
+
+        $perPage = 8;
+        $currentPage = $request->input('page', 1);
+        $offset = ($currentPage - 1) * $perPage;
+        $paginatedCities = array_slice($citiesFiltered, $offset, $perPage);
+        $total = count($citiesFiltered);
+
+        return response()->json([
+            'cities' => $paginatedCities,
+            'total' => $total,
+            'currentPage' => $currentPage,
+            'perPage' => $perPage,
+        ]);
     }
 
     /**
@@ -65,6 +120,10 @@ class ResultController extends Controller
             'result' => $result['data']['class'],
         ]);
     }
+
+    /**
+     * Format the class name.
+     */
     private function formatClassName($className)
     {
         // Replace all underscores with spaces
@@ -74,6 +133,10 @@ class ResultController extends Controller
     
         return $className;
     }
+
+    /**
+     * Generate the doctor URL based on the type.
+     */
     private function generateDoctorUrl($type)
     {
         switch ($type) {

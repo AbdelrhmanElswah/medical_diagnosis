@@ -48,6 +48,7 @@ Route::get('/user', [UserController::class, 'showUser'])->name('user');
 
 
 Route::get('/', [HomeController::class, 'showHome'])->name('home');
+Route::post('/submit-review', [HomeController::class, 'submitReview'])->name('submit.review');
 
 
 
@@ -99,6 +100,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/contact-us', [ContactSubmissionController::class, 'store'])->name('contact.store');
 })->middleware('guest');
 
+Route::get('/cities', [ResultController::class, 'getCities']);
 
 
 

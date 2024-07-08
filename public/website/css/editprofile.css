@@ -1,7 +1,9 @@
 body {
   background-color: #acd9d1;
 }
-
+.main{
+  background-color:var(--background-color) !important ;
+}
 /* navbar style */
 
 #but1 {

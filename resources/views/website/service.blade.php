@@ -1,8 +1,7 @@
 @extends('layouts.app')
 @push('head')
 <link rel="stylesheet" href="{{ asset('website/css/service.css') }}" />
-
-@endPush('head')
+@endpush
 @section('content')
     <div class="service-container py-5 ">
     <h1 class="text-center text-light" id="text0">Our Services</h1>
@@ -17,13 +16,9 @@
             <div class="card-body">
               <h3 class="card-title">Brain Tumor Detection</h3>
               <p class="card-text">
-                Our AI-based brain tumor detection system analyzes medical
-                imaging scans, such as MRI and swiftly identifies potential
-                abnormalities indicative of brain tumors. By leveraging
-                sophisticated machine learning techniques, we can assist
-                healthcare professionals in the early detection and diagnosis of
-                brain tumors, facilitating timely treatment and improved patient
-                outcomes.
+                Use our AI-powered system to analyze MRI scans of the brain and swiftly identify potential abnormalities indicative of brain tumors.<br />
+                <strong>Input:</strong> MRI scans<br />
+                <strong>Output:</strong> One of four categories: glioma tumor, meningioma tumor, pituitary tumor, and normal<br />
               </p>
               <a href="{{route('upload.brain')}}" class="btn">Try Now !</a>
             </div>
@@ -43,11 +38,9 @@
             <div class="card-body">
               <h3 class="card-title">Chest Disease Identification</h3>
               <p class="card-text">
-                Our AI-powered classification system is also designed to
-                evaluate chest X-rays and aid in diagnosing various respiratory
-                and chest diseases. From identifying lung infections such as
-                pneumonia.
-              </p>
+                Use our AI-powered system to evaluate chest X-rays and diagnose various respiratory and chest diseases.<br />
+                <strong>Input:</strong> Chest X-ray images<br />
+                <strong>Output:</strong> One of four categories: COVID-19, lung opacity, normal lungs, and viral pneumonia<br />
               <a href="{{route('upload.chest')}}" class="btn">Try Now !</a>
             </div>
           </div>
@@ -66,11 +59,9 @@
             <div class="card-body">
               <h3 class="card-title">Eye Disease Diagnosis</h3>
               <p class="card-text">
-                Through the utilization of AI-driven classification, our website
-                offers reliable and rapid assessment of various eye diseases. By
-                uploading retinal images, ur system can identify signs of common
-                eye conditions, including glaucoma, cataract and diabetic
-                retinopathy
+                Use our AI-powered system to provide reliable and rapid assessment of various eye diseases.<br />
+                <strong>Input:</strong> Retinal images<br />
+                <strong>Output:</strong> One of four categories: cataracts, diabetic retinopathy, glaucoma, and normal eyes<br />
               </p>
               <a href="{{route('upload.eye')}}" class="btn">Try Now !</a>
             </div>

@@ -35,13 +35,13 @@ class DashboardController extends Controller
             ['Negative Checkup', $negativeCheckups],
         ];
     
-        return view('website.dashboard', compact('historyData', 'user', 'chartData'));
+        return view('dashboard.index', compact('historyData', 'user', 'chartData'));
     }
     
 
     public function showContact()
     {
-        return view('website.contactus');
+        return view('dashboard.contactus');
     }
 
     public function history()
@@ -49,7 +49,7 @@ class DashboardController extends Controller
         // Fetch all history data
         $historyData = $this->getUserHistoryData();
 
-        return view('website.history', compact('historyData'));
+        return view('dashboard.history', compact('historyData'));
     }
 
     protected function getUserHistoryData($limit = null)

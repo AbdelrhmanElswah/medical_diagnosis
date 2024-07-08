@@ -189,4 +189,68 @@
   .btn:hover {
     box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Subtle shadow for depth */
   }
+  .custom-city-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+}
+.custom-city-list li {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Search input styling */
+.search-input {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* Custom city list styling */
+.custom-city-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px; /* Adjust based on your needs */
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Custom city list item styling */
+.custom-city-list li {
+  padding: 10px;
+  margin: 0;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Custom city list item hover and active styling */
+.custom-city-list li:hover,
+.custom-city-list li.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Last item border adjustment */
+.custom-city-list li:last-child {
+  border-bottom: none;
+}
+
+/* Pagination styling (if needed) */
+.pagination {
+  justify-content: center;
 }

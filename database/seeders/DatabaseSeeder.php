@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             
         ]);
         $this->call(ModelDescriptionSeeder::class);
+        $this->call(ReviewSeeder::class);
 
     }
 }

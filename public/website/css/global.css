@@ -74,7 +74,7 @@ body {
 }
 
 #but1:hover {
-    background-color: -var(--background-color); /* Background color on hover */
+    background-color: var(--background-color); /* Background color on hover */
     color: #ffffff; /* Text color on hover */
 }
 
