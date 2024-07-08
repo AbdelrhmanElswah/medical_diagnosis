@@ -11,22 +11,34 @@ class ModelDescriptionSeeder extends Seeder
         DB::table('model_descriptions')->insert([
             [
                 'class_name' => 'glioma_tumor',
-                'description' => '<p>This scan indicates the presence of a glioma tumor, a type of tumor that occurs in the brain and spinal cord.</p><p>The AI model has identified regions within the scan that suggest the presence of glioma, which is typically characterized by its shape and density.</p><p>Early detection is crucial for effective treatment. Consult a neurologist for further evaluation and possible intervention options.</p>',
+                'description' => '<p>MRI scan showing glioma, a type of tumor that arises from glial cells which
+                are the supportive cells (not neurons) in the brain or spine, often appearing as
+                irregular, infiltrative masses.
+                Gliomas can be benign (slow-growing and noncancerous) or malignant (fastgrowing and cancerous).</p>',
                 'type' => 'brain'
             ],
             [
                 'class_name' => 'normal',
-                'description' => '<p>The brain scan shows no evidence of tumors.</p><p>The AI model\'s analysis, using advanced pattern recognition, confirms the absence of abnormal growths.</p><p>Continue to monitor your health and maintain regular neurological check-ups, especially if you have risk factors or a family history of brain conditions.</p>',
+                'description' => '<p>MRI scans of healthy brains with no detectable tumors.</p><p>Continue to monitor your health and maintain regular neurological check-ups</p>',
                 'type' => 'brain'
             ],
             [
                 'class_name' => 'meningioma_tumor',
-                'description' => '<p>This scan has detected a meningioma tumor, typically a benign tumor that forms on the membranes covering the brain and spinal cord, just inside the skull.</p><p>While often slow-growing, regular monitoring and medical guidance are recommended to manage and assess any potential changes in the tumor\'s behavior.</p>',
+                'description' => '<p>This scan has detected meningiomas</p> <p>meningiomas tumors develop from the meninges, the
+                protective membranes covering the brain and spinal cord, usually appearing as
+                well-defined, localized masses.
+                The vast majority (around 90%) of meningiomas are benign. Malignant
+                meningiomas are rare..</p>',
                 'type' => 'brain'
             ],
             [
                 'class_name' => 'pituitary_tumor',
-                'description' => '<p>The presence of a pituitary tumor has been detected.</p><p>These tumors are often benign and develop in the pituitary gland.</p><p>It\'s important to follow up with endocrinological evaluation and management, as these tumors can affect hormonal balance and cause a variety of symptomatic expressions.</p>',
+                'description' => '<p>The presence of a pituitary tumor has been detected.</p><p>
+                g tumors in the pituitary gland, a small gland at the base of
+                the brain which produces hormones that regulate various bodily functions, these
+                tumors often appearing as small, localized growths.
+                Like meningiomas, most pituitary tumors (around 80%) are benign. However,
+                even benign tumors can cause problems by affecting hormone production</p>',
                 'type' => 'brain'
             ],
             [
