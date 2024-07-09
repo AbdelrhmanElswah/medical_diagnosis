@@ -15,7 +15,7 @@ class ReviewSeeder extends Seeder
     public function run()
     {
         Review::create([
-            'user_id' => 3,
+            'user_id' => 1,
             'name' => 'John Doe',
             'role' => 'Doctor',
             'review' => 'Fantastic Response! This medical and health care facility distinguishes itself from the competition by providing technologically advanced medical and health care.',
@@ -23,7 +23,7 @@ class ReviewSeeder extends Seeder
         ]);
 
         Review::create([
-            'user_id' => 3,
+            'user_id' => 1,
             'name' => 'Jane Smith',
             'role' => 'Nurse',
             'review' => 'Highly recommended! The AI diagnostics are incredibly accurate and fast, making my job much easier.',
@@ -31,7 +31,7 @@ class ReviewSeeder extends Seeder
         ]);
 
         Review::create([
-            'user_id' => 3,
+            'user_id' => 1,
             'name' => 'Alice Johnson',
             'role' => 'Patient',
             'review' => 'Great service! The platform provided me with detailed and accurate diagnostics that helped my doctor make a quick decision.',
@@ -39,7 +39,7 @@ class ReviewSeeder extends Seeder
         ]);
 
         Review::create([
-            'user_id' => 3,
+            'user_id' => 1,
             'name' => 'Bob Brown',
             'role' => 'Lab Technician',
             'review' => 'Very useful tool. The AI-powered diagnostics help us quickly analyze and understand the medical images.',
@@ -47,7 +47,7 @@ class ReviewSeeder extends Seeder
         ]);
 
         Review::create([
-            'user_id' => 3,
+            'user_id' => 1,
             'name' => 'Cathy Wilson',
             'role' => 'Radiologist',
             'review' => 'Excellent platform! The accuracy of the diagnostics is impressive, and it saves a lot of time.',

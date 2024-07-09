@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
+use App\Services\FileUploadService;
 use Illuminate\Http\Request;
 use App\Models\ModelDescription;
 use App\Models\ModelImage;
@@ -16,20 +17,20 @@ class ResultController extends Controller
      */
     public function index()
     {
-        if (!session()->has('resultData')) {
+        if (!session()->has('prediction')) {
             return redirect('/'); // Redirect to a default page if no data is available
         }
 
-        $result = session('resultData');
-        $type = session('type');
-        $uploadedImageUrl = session('uploadedImageUrl');
+        $prediction = session('prediction');
+        $result = $prediction['resultData'];
+        $type = $prediction['type'];
+        $uploadedImageUrl = $prediction['uploadedImageUrl'];
         $formattedClassName = $this->formatClassName($result['data']['class']);
 
         // Fetch the description from the database
         $description = ModelDescription::where('type', $type)
                                        ->where('class_name', $result['data']['class'])
                                        ->first();
-
         // Save the user history
         $this->saveUserHistory($result, $type, $description);
 
@@ -102,7 +103,7 @@ class ResultController extends Controller
         }
 
         $userId = Auth::id();
-        $imagePath = session('uploadedImageUrl'); // Assuming this is the path to the uploaded image
+        $imagePath = session('prediction')['uploadedImageUrl']; // Assuming this is the path to the uploaded image
 
         // Create or find the ModelImage
         $modelImage = ModelImage::firstOrCreate(

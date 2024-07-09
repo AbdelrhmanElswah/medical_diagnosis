@@ -25,7 +25,7 @@
                 <div class="col-auto col-md-4 col-lg-auto text-xl-start">
                     <div class="d-flex flex-column align-items-center">
                         <div class="icon-box text-center">
-                            <a class="text-decoration-none" href="#!">
+                            <a class="text-decoration-none" href="{{ route('service.index') }}">
                                 <img class="mb-3 focus-icon" src="{{ asset('website/img/icons/neurology.png') }}" alt="Neurology" />
                                 <img class="mb-3 focus-icon-hover" src="{{ asset('website/img/icons/neurology.svg') }}" alt="Neurology" />
                                 <p class="fs-1 fs-xxl-2 icon-text text-center">Brain Scans</p>
@@ -36,7 +36,7 @@
                 <div class="col-auto col-md-4 col-lg-auto text-xl-start">
                     <div class="d-flex flex-column align-items-center">
                         <div class="icon-box text-center">
-                            <a class="text-decoration-none" href="#!">
+                            <a class="text-decoration-none" href="{{ route('service.index') }}">
                                 <img class="mb-3 focus-icon" src="{{ asset('website/img/icons/eye-care.png') }}" alt="Eye care" />
                                 <img class="mb-3 focus-icon-hover" src="{{ asset('website/img/icons/eye-care.svg') }}" alt="Eye care" />
                                 <p class="fs-1 fs-xxl-2 icon-text text-center">Eye Scans</p>
@@ -47,7 +47,7 @@
                 <div class="col-auto col-md-4 col-lg-auto text-xl-start">
                     <div class="d-flex flex-column align-items-center">
                         <div class="icon-box text-center">
-                            <a class="text-decoration-none " href="#!">
+                            <a class="text-decoration-none " href="{{ route('service.index') }}">
                                 <img class="mb-3 focus-icon" src="{{ asset('website/img/icons/cardiac.png') }}" alt="Cardiac care" />
                                 <img class="mb-3 focus-icon-hover" src="{{ asset('website/img/icons/cardiac.svg') }}" alt="Cardiac care" />
                                 <p class="fs-1 fs-xxl-2 icon-text text-center">Chest Scans</p>

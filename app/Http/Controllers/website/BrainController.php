@@ -30,11 +30,18 @@ class BrainController extends Controller
         $response = Http::attach(
             'file', file_get_contents($file), $file->getClientOriginalName()
         )->post($flaskApiUrl);
+        session()->forget('prediction');
 
         if ($response->successful()) {
             $result = $response->json();
             // Store result in session or cache
-            session(['resultData' => $result, 'type' => 'brain', 'uploadedImageUrl' => $uploadedImageUrl]);
+            session([
+                'prediction' => [
+                    'resultData' => $result,
+                    'type' => 'brain',
+                    'uploadedImageUrl' => $uploadedImageUrl
+                ]
+            ]);
             return redirect()->action([ResultController::class, 'index']);
         } else {
             return back()->with('error', 'Error calling Flask API');
