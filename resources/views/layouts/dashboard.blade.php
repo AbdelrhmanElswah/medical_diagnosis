@@ -51,7 +51,7 @@
                         <div class="dropdown pb-5">
                             <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="{{ Auth::user()->profile_picture ? asset('storage/' . Auth::user()->profile_picture) : 'http://bootdey.com/img/Content/avatar/avatar1.png' }}" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                                <span class="d-none d-sm-inline mx-1">Username</span>
+                                <span class="d-none d-sm-inline mx-1">{{Auth::user()->name}}</span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
                                 <li><a class="dropdown-item" href="{{ route('edit.profile') }}">Edit Profile</a></li>
