@@ -201,7 +201,7 @@
             <div class="row">
                 <div class="col-sm-6 col-lg-3 mb-4">
                     <div class="card h-100 shadow card-span rounded-3">
-                        <img class="card-img-top rounded-top-3" src="{{ asset('website/img/covid-19.png') }}" alt="news" />
+                        <img class="card-img-top rounded-top-3" src="{{ asset('website/img/covid19image_16x9.jpg') }}" alt="news" />
                         <div class="card-body">
                             <span class="fs--1 text-dark me-3">Health</span>
                             <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
@@ -209,53 +209,54 @@
                                 <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"></path>
                             </svg>
                             <span class="fs--1 text-900">Apr 21, 2024</span>
-                            <h5 class="font-base fs-lg-0 fs-xl-1 my-3">COVID-19: The Most Up-to-Date Information</h5>
-                            <a class="stretched-link text-dark" href="#!">Read full article</a>
+                            <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Can Doctors Predict The Severity of COVID-19 in Their Patients?</h5>
+                            <a class="stretched-link text-dark" href="https://drexel.edu/news/archive/2023/June/Can-Doctors-Predict-The-Severity-of-COVID-19-in-Their-Patients">Read full article</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3 mb-4">
                     <div class="card h-100 shadow card-span rounded-3">
-                        <img class="card-img-top rounded-top-3" src="{{ asset('website/img/laboratories.png') }}" alt="news" />
-                        <div class="card-body">
-                            <span class="fs--1 text-dark me-3">Lifestyle</span>
-                            <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"></path>
-                                <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"></path>
-                            </svg>
-                            <span class="fs--1 text-900">Nov 25, 2023</span>
-                            <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Importance of Accreditation for Laboratories</h5>
-                            <a class="stretched-link text-dark" href="#!">Read full article</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3 mb-4">
-                    <div class="card h-100 shadow card-span rounded-3">
-                        <img class="card-img-top rounded-top-3" src="{{ asset('website/img/nicotine.png') }}" alt="news" />
+                        <img class="card-img-top rounded-top-3" src="{{ asset('website/img/Image_11-300x200.jpeg') }}" alt="news" />
                         <div class="card-body">
                             <span class="fs--1 text-dark me-3">Health</span>
                             <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
                                 <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"></path>
                                 <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"></path>
                             </svg>
-                            <span class="fs--1 text-900">Nov 28, 2022</span>
-                            <h5 class="font-base fs-lg-0 fs-xl-1 my-3">The dangers of nicotine are addressed in depth</h5>
-                            <a class="stretched-link text-dark" href="#!">Read full article</a>
+                            <span class="fs--1 text-900">Aug 18, 2023</span>
+                            <h5 class="font-base fs-lg-0 fs-xl-1 my-3">AI model for detecting ocular disease using retinal images</h5>
+                            <a class="stretched-link text-dark" href="https://www.news-medical.net/news/20230918/AI-model-for-detecting-ocular-disease-using-retinal-images.aspx">Read full article</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3 mb-4">
                     <div class="card h-100 shadow card-span rounded-3">
-                        <img class="card-img-top rounded-top-3" src="{{ asset('website/img/treatment.png') }}" alt="news" />
+                        <img class="card-img-top rounded-top-3" src="{{ asset('website/img/COPD_radiography.jpg') }}" alt="news" />
                         <div class="card-body">
                             <span class="fs--1 text-dark me-3">Health</span>
                             <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
                                 <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"></path>
                                 <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"></path>
                             </svg>
-                            <span class="fs--1 text-900">Nov 30, 2023</span>
-                            <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Treatment of patients with diabetes during COVID-19</h5>
-                            <a class="stretched-link text-dark" href="#!">Read full article</a>
+                            <span class="fs--1 text-900">Nov 28, 2019</span>
+                            <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Study funded by NIH supports optimal threshold for diagnosing COPD</h5>
+                            <a class="stretched-link text-dark" href="https://www.nhlbi.nih.gov/news/2019/study-funded-nih-supports-optimal-threshold-diagnosing-copd">Read full article</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 mb-4">
+                    <div class="card h-100 shadow card-span rounded-3">
+                        <img class="card-img-top rounded-top-3" src="{{ asset('website/img/GlioblastomaVaccine-700x467.jpg') }}" alt="news" />
+                        <div class="card-body">
+                            <span class="fs--1 text-dark me-3">Health</span>
+                            <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"></path>
+                                <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"></path>
+                            </svg>
+                            <span class="fs--1 text-900">Mar 13, 2024</span>
+                            <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Novel dual-target CAR T cell therapy shows promise in treating
+                            recurrent glioblastoma</h5>
+                            <a class="stretched-link text-dark" href="https://www.news-medical.net/news/20240313/Novel-dual-target-CAR-T-cell-therapy-shows-promise-in-treating-recurrent-glioblastoma.aspx">Read full article</a>
                         </div>
                     </div>
                 </div>
